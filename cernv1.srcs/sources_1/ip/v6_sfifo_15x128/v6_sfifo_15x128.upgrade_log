@@ -1,0 +1,279 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
+| Date         : Tue Feb 10 09:43:43 2015
+| Host         : ubuntu running 64-bit Ubuntu 12.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7a200tfbg676-2
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'v6_sfifo_15x128'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of v6_sfifo_15x128 from xilinx.com:ip:fifo_generator:8.3 to xilinx.com:ip:fifo_generator:12.0 (Rev. 1)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Warnings
+-----------
+
+WARNING: The upgraded user parameter set contained parameters that could not be mapped on to the upgraded IP. When checking the upgrade script, note that parameter names are case sensitive.
+
+
+3. Customization warnings
+-------------------------
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_read_channel'
+
+WARNING: Upgrade target IP does not have parameter ID for 'axi_data_width'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_tdest'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_buser'
+
+WARNING: Upgrade target IP does not have parameter ID for 'use_clock_enable'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_handshake_flag_options_rdch'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_ruser'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_handshake_flag_options_rach'
+
+WARNING: Upgrade target IP does not have parameter ID for 'axi_type'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_wuser'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_handshake_flag_options_axis'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_handshake_flag_options_wdch'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_tid'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_tuser'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_handshake_flag_options_wach'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_tkeep'
+
+WARNING: Upgrade target IP does not have parameter ID for 'axi_address_width'
+
+WARNING: Upgrade target IP does not have parameter ID for 'tdata_width'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_aruser'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_tdata'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_handshake_flag_options_wrch'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_write_channel'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_awuser'
+
+WARNING: Upgrade target IP does not have parameter ID for 'enable_tstrobe'
+
+WARNING: Attempt to set value '4' on disabled parameter 'TKEEP_WIDTH' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '4' on disabled parameter 'TSTRB_WIDTH' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '4' on disabled parameter 'TDEST_WIDTH' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '8' on disabled parameter 'TID_WIDTH' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Empty' on disabled parameter 'Programmable_Empty_Type_axis' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Full' on disabled parameter 'Programmable_Full_Type_axis' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Empty' on disabled parameter 'Programmable_Empty_Type_rdch' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Full' on disabled parameter 'Programmable_Full_Type_rdch' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Empty' on disabled parameter 'Programmable_Empty_Type_rach' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Full' on disabled parameter 'Programmable_Full_Type_rach' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Empty' on disabled parameter 'Programmable_Empty_Type_wrch' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Full' on disabled parameter 'Programmable_Full_Type_wrch' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Empty' on disabled parameter 'Programmable_Empty_Type_wdch' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Full' on disabled parameter 'Programmable_Full_Type_wdch' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Empty' on disabled parameter 'Programmable_Empty_Type_wach' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value 'Full' on disabled parameter 'Programmable_Full_Type_wach' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '1' on disabled parameter 'RUSER_Width' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '1' on disabled parameter 'ARUSER_Width' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '1' on disabled parameter 'BUSER_Width' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '1' on disabled parameter 'WUSER_Width' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '1' on disabled parameter 'AWUSER_Width' is ignored for 'v6_sfifo_15x128'
+
+WARNING: Attempt to set value '4' on disabled parameter 'ID_WIDTH' is ignored for 'v6_sfifo_15x128'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  Please consult the warnings from the previous sections, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:fifo_generator:12.0 -user_name v6_sfifo_15x128
+set_property -dict "\
+  CONFIG.Add_NGC_Constraint_AXI false \
+  CONFIG.Empty_Threshold_Assert_Value_wdch 1022 \
+  CONFIG.Register_Slice_Mode_wdch Fully_Registered \
+  CONFIG.Full_Threshold_Assert_Value_rach 1023 \
+  CONFIG.Input_Depth_rach 16 \
+  CONFIG.Programmable_Full_Type Single_Programmable_Full_Threshold_Constant \
+  CONFIG.Enable_TREADY true \
+  CONFIG.Empty_Threshold_Assert_Value_wach 1022 \
+  CONFIG.Inject_Sbit_Error_wrch false \
+  CONFIG.Register_Slice_Mode_wach Fully_Registered \
+  CONFIG.TUSER_WIDTH 4 \
+  CONFIG.Almost_Empty_Flag false \
+  CONFIG.FIFO_Application_Type_rdch Data_FIFO \
+  CONFIG.Input_Data_Width 128 \
+  CONFIG.Programmable_Empty_Type_rdch Empty \
+  CONFIG.Enable_Data_Counts_axis false \
+  CONFIG.FIFO_Application_Type_rach Data_FIFO \
+  CONFIG.Programmable_Empty_Type_rach Empty \
+  CONFIG.Write_Clock_Frequency 1 \
+  CONFIG.Full_Threshold_Assert_Value_axis 1023 \
+  CONFIG.Input_Depth_axis 1024 \
+  CONFIG.Data_Count false \
+  CONFIG.TDEST_WIDTH 4 \
+  CONFIG.Enable_ECC_wrch false \
+  CONFIG.Underflow_Flag false \
+  CONFIG.Enable_Data_Counts_wdch false \
+  CONFIG.Use_Dout_Reset true \
+  CONFIG.Almost_Full_Flag false \
+  CONFIG.Inject_Dbit_Error_wrch false \
+  CONFIG.Read_Data_Count false \
+  CONFIG.Programmable_Full_Type_wrch Full \
+  CONFIG.Full_Threshold_Assert_Value_wdch 1023 \
+  CONFIG.Input_Depth_wdch 1024 \
+  CONFIG.Enable_Common_Overflow false \
+  CONFIG.Write_Data_Count_Width 4 \
+  CONFIG.wach_type FIFO \
+  CONFIG.Enable_Data_Counts_wach false \
+  CONFIG.FIFO_Application_Type_axis Data_FIFO \
+  CONFIG.Programmable_Empty_Type_axis Empty \
+  CONFIG.Underflow_Sense_AXI Active_High \
+  CONFIG.wrch_type FIFO \
+  CONFIG.Full_Threshold_Assert_Value_wach 1023 \
+  CONFIG.Input_Depth_wach 16 \
+  CONFIG.Underflow_Flag_AXI false \
+  CONFIG.Reset_Pin true \
+  CONFIG.FIFO_Implementation_rdch Common_Clock_Block_RAM \
+  CONFIG.Reset_Type Asynchronous_Reset \
+  CONFIG.FIFO_Application_Type_wdch Data_FIFO \
+  CONFIG.Programmable_Empty_Type_wdch Empty \
+  CONFIG.Overflow_Flag_AXI false \
+  CONFIG.FIFO_Implementation_rach Common_Clock_Block_RAM \
+  CONFIG.FIFO_Application_Type_wach Data_FIFO \
+  CONFIG.Programmable_Empty_Type_wach Empty \
+  CONFIG.rdch_type FIFO \
+  CONFIG.Inject_Sbit_Error_rdch false \
+  CONFIG.Overflow_Sense Active_High \
+  CONFIG.axis_type FIFO \
+  CONFIG.Component_Name v6_sfifo_15x128 \
+  CONFIG.Empty_Threshold_Assert_Value_wrch 1022 \
+  CONFIG.Register_Slice_Mode_wrch Fully_Registered \
+  CONFIG.Inject_Sbit_Error_rach false \
+  CONFIG.Enable_ECC false \
+  CONFIG.FIFO_Implementation_axis Common_Clock_Block_RAM \
+  CONFIG.Overflow_Flag false \
+  CONFIG.Enable_ECC_rdch false \
+  CONFIG.Use_Extra_Logic false \
+  CONFIG.Full_Flags_Reset_Value 1 \
+  CONFIG.Inject_Dbit_Error_rdch false \
+  CONFIG.TID_WIDTH 8 \
+  CONFIG.Data_Count_Width 4 \
+  CONFIG.Clock_Enable_Type Slave_Interface_Clock_Enable \
+  CONFIG.Programmable_Full_Type_rdch Full \
+  CONFIG.Enable_ECC_rach false \
+  CONFIG.FIFO_Implementation_wdch Common_Clock_Block_RAM \
+  CONFIG.Disable_Timing_Violations_AXI false \
+  CONFIG.Inject_Sbit_Error_axis false \
+  CONFIG.Inject_Dbit_Error_rach false \
+  CONFIG.AWUSER_Width 1 \
+  CONFIG.Programmable_Full_Type_rach Full \
+  CONFIG.Disable_Timing_Violations false \
+  CONFIG.FIFO_Implementation_wach Common_Clock_Block_RAM \
+  CONFIG.Enable_Data_Counts_wrch false \
+  CONFIG.Empty_Threshold_Negate_Value 3 \
+  CONFIG.Inject_Sbit_Error_wdch false \
+  CONFIG.Valid_Sense Active_High \
+  CONFIG.Performance_Options Standard_FIFO \
+  CONFIG.Enable_TLAST false \
+  CONFIG.wdch_type FIFO \
+  CONFIG.Full_Threshold_Assert_Value_wrch 1023 \
+  CONFIG.Input_Depth_wrch 16 \
+  CONFIG.Inject_Dbit_Error false \
+  CONFIG.Enable_Reset_Synchronization true \
+  CONFIG.Underflow_Sense Active_High \
+  CONFIG.Enable_ECC_axis false \
+  CONFIG.Output_Depth 16 \
+  CONFIG.Inject_Sbit_Error_wach false \
+  CONFIG.Inject_Dbit_Error_axis false \
+  CONFIG.Full_Threshold_Negate_Value 11 \
+  CONFIG.Programmable_Empty_Type Single_Programmable_Empty_Threshold_Constant \
+  CONFIG.Programmable_Full_Type_axis Full \
+  CONFIG.enable_read_pointer_increment_by2 false \
+  CONFIG.Enable_ECC_wdch false \
+  CONFIG.ARUSER_Width 1 \
+  CONFIG.Overflow_Sense_AXI Active_High \
+  CONFIG.FIFO_Application_Type_wrch Data_FIFO \
+  CONFIG.Programmable_Empty_Type_wrch Empty \
+  CONFIG.WUSER_Width 1 \
+  CONFIG.Inject_Dbit_Error_wdch false \
+  CONFIG.Empty_Threshold_Assert_Value_rdch 1022 \
+  CONFIG.Read_Clock_Frequency 1 \
+  CONFIG.Register_Slice_Mode_rdch Fully_Registered \
+  CONFIG.TKEEP_WIDTH 4 \
+  CONFIG.Fifo_Implementation Common_Clock_Shift_Register \
+  CONFIG.Programmable_Full_Type_wdch Full \
+  CONFIG.Enable_ECC_wach false \
+  CONFIG.Enable_Common_Underflow false \
+  CONFIG.Inject_Dbit_Error_wach false \
+  CONFIG.Empty_Threshold_Assert_Value_rach 1022 \
+  CONFIG.Register_Slice_Mode_rach Fully_Registered \
+  CONFIG.Programmable_Full_Type_wach Full \
+  CONFIG.TSTRB_WIDTH 4 \
+  CONFIG.Valid_Flag false \
+  CONFIG.Dout_Reset_Value 0 \
+  CONFIG.Write_Acknowledge_Sense Active_High \
+  CONFIG.Write_Acknowledge_Flag false \
+  CONFIG.BUSER_Width 1 \
+  CONFIG.Read_Data_Count_Width 4 \
+  CONFIG.Empty_Threshold_Assert_Value 2 \
+  CONFIG.Inject_Sbit_Error false \
+  CONFIG.RUSER_Width 1 \
+  CONFIG.Output_Data_Width 128 \
+  CONFIG.INTERFACE_TYPE Native \
+  CONFIG.Enable_Data_Counts_rdch false \
+  CONFIG.Empty_Threshold_Assert_Value_axis 1022 \
+  CONFIG.Register_Slice_Mode_axis Fully_Registered \
+  CONFIG.Clock_Type_AXI Common_Clock \
+  CONFIG.rach_type FIFO \
+  CONFIG.Write_Data_Count false \
+  CONFIG.FIFO_Implementation_wrch Common_Clock_Block_RAM \
+  CONFIG.Full_Threshold_Assert_Value 12 \
+  CONFIG.Full_Threshold_Assert_Value_rdch 1023 \
+  CONFIG.ID_WIDTH 4 \
+  CONFIG.Input_Depth 16 \
+  CONFIG.Input_Depth_rdch 1024 \
+  CONFIG.Use_Embedded_Registers false \
+  CONFIG.Enable_Data_Counts_rach false " [get_ips v6_sfifo_15x128]
+
+

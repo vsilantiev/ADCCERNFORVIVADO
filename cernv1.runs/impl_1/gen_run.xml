@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1423561800">
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="v6pcieDMA.vdi"/>
+  <File Type="BG-DRC" Name="v6pcieDMA.drc"/>
+  <File Type="BG-BGN" Name="v6pcieDMA.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="v6pcieDMA.sysdef"/>
+  <File Type="BITSTR-MMI" Name="v6pcieDMA.mmi"/>
+  <File Type="BITSTR-BMM" Name="v6pcieDMA_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="v6pcieDMA.nky"/>
+  <File Type="BITSTR-RBT" Name="v6pcieDMA.rbt"/>
+  <File Type="BITSTR-MSK" Name="v6pcieDMA.msk"/>
+  <File Type="BG-BIN" Name="v6pcieDMA.bin"/>
+  <File Type="BG-BIT" Name="v6pcieDMA.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="v6pcieDMA_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="v6pcieDMA_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="v6pcieDMA_postroute_physopt.dcp"/>
+  <File Type="ROUTE-SIMILARITY" Name="v6pcieDMA_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="v6pcieDMA_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="v6pcieDMA_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="v6pcieDMA_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="v6pcieDMA_route_status.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="v6pcieDMA_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="v6pcieDMA_power_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="v6pcieDMA_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="v6pcieDMA_drc_routed.rpt"/>
+  <File Type="ROUTE-DCP" Name="v6pcieDMA_routed.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="v6pcieDMA_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="v6pcieDMA_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="v6pcieDMA_postplace_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="v6pcieDMA_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="v6pcieDMA_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="v6pcieDMA_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="v6pcieDMA_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="v6pcieDMA_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="v6pcieDMA_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="v6pcieDMA_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="v6pcieDMA_placed.dcp"/>
+  <File Type="PWROPT-DRC" Name="v6pcieDMA_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="v6pcieDMA_pwropt.dcp"/>
+  <File Type="OPT-DRC" Name="v6pcieDMA_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="v6pcieDMA_opt.dcp"/>
+  <File Type="PA-TCL" Name="v6pcieDMA.tcl"/>
+  <File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+  <File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc">
+      <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc"/>
+        <Attr Name="ImportTime" Val="1423467816"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+      <Desc>Vivado Implementation Defaults</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="v6_sfifo_15x128"/>
+  <BlockFileSet Type="BlockSrcs" Name="v6_mBuf_128x72"/>
+  <BlockFileSet Type="BlockSrcs" Name="v6_eb_fifo_counted_resized"/>
+</GenRun>

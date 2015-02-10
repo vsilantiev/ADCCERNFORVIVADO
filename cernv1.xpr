@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2014.2 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright (c) 2001-2013 Xilinx Inc, All rights reserved -->
+
+<Project Version="7" Minor="1" Path="/home/vladimir/TESTDIFFAC/cernv1/cernv1.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="94dfac332eaf45a09bfe557279ace039"/>
+    <Option Name="Part" Val="xc7a200tfbg676-2"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="TargetLanguage" Val="VHDL"/>
+    <Option Name="BoardPart" Val=""/>
+    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/v6abb64Package_efifo_elink.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/v6abb64Package_efifo_elink.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/FF_tagram64x36.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/FF_tagram64x36.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/DMA_FSM.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/DMA_FSM.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/DMA_Calculate.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/DMA_Calculate.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/Tx_Output_Arbitor.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/Tx_Output_Arbitor.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/tx_Mem_Reader.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/tx_Mem_Reader.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/rx_usDMA_Channel.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/rx_usDMA_Channel.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/rx_MWr_Channel.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/rx_MWr_Channel.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/rx_MRd_Channel.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/rx_MRd_Channel.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/rx_dsDMA_Channel.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/rx_dsDMA_Channel.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/rx_CplD_Channel.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/rx_CplD_Channel.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/RxIn_Delays.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/RxIn_Delays.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/Interrupts.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/Interrupts.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/serdes.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/serdes.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/tx_Transact.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/tx_Transact.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/rx_Transact.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/rx_Transact.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/Registers.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/Registers.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/i2c_master.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/i2c_master.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/pcie_axi_trn_bridge.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/tlpControl.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/tlpControl.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/FIFO_Wrapper.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/FIFO_Wrapper.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/fmc_adc_100Ms_core.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/fmc_adc_100Ms_core.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cern.git/MySource/v6eb_pcie.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySource/v6eb_pcie.vhd"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/support/pcie_7x_0_pipe_clock.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/example_design/support/pcie_7x_0_pipe_clock.v"/>
+          <Attr Name="ImportTime" Val="1423547574"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/support/pcie_7x_0_support.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/example_design/support/pcie_7x_0_support.vhd"/>
+          <Attr Name="ImportTime" Val="1423547574"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/pcie_7x_0/pcie_7x_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0.dcp"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0_stub.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0_funcsim.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0_funcsim.vhdl"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="doc/pcie_7x_v3_0_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0.vho"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0.xml"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="synth/pcie_7x_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="synth/pcie_7x_0_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0-PCIE_X0Y0.xdc"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="sim/pcie_7x_0.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie2_top.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_top.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gt_common.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gt_wrapper.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gt_top.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gt_rx_valid_filter_7x.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_pipe_pipeline.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_pipe_misc.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_pipe_lane.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_brams_7x.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_bram_top_7x.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_bram_7x.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_7x.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_tx.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_tx_pipeline.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_top.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_rx.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_rx_pipeline.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_rx_null_gen.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_rxeq_scan.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_qpll_wrapper.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_qpll_reset.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_qpll_drp.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_wrapper.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_user.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gtp_pipe_reset.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gtp_pipe_drp.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gtp_pipe_rate.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_sync.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_reset.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_rate.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_eq.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_core_top.vhd"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_drp.v"/>
+        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0_stub.vhdl"/>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="v6pcieDMA"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc"/>
+          <Attr Name="ImportTime" Val="1423467816"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc"/>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <File Path="$PSRCDIR/sim_1/imports/MySim/tf64_pcie_trn.v">
+        <FileInfo>
+          <Attr Name="Library" Val="xil_defaultlib"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../cern.git/MySim/tf64_pcie_trn.v"/>
+          <Attr Name="ImportTime" Val="1421228736"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="tf64_pcie_trn"/>
+        <Option Name="SimulationRunTime" Val="10000 ns"/>
+        <Option Name="UnitUnderTest" Val="UUT"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="NGOutputHDLFormat" Val="vhdl"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="v6_eb_fifo_counted_resized" Type="BlockSrcs" RelSrcDir="$PSRCDIR/v6_eb_fifo_counted_resized">
+      <File Path="$PSRCDIR/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="v6_eb_fifo_counted_resized"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="v6_sfifo_15x128" Type="BlockSrcs" RelSrcDir="$PSRCDIR/v6_sfifo_15x128">
+      <File Path="$PSRCDIR/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="v6_sfifo_15x128"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="v6_mBuf_128x72" Type="BlockSrcs" RelSrcDir="$PSRCDIR/v6_mBuf_128x72">
+      <File Path="$PSRCDIR/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="v6_mBuf_128x72"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Runs Version="1" Minor="9">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tfbg676-2" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="v6_eb_fifo_counted_resized_synth_1" Type="Ft3:Synth" SrcSet="v6_eb_fifo_counted_resized" Part="xc7a200tfbg676-2" ConstrsSet="v6_eb_fifo_counted_resized" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/v6_eb_fifo_counted_resized_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="v6_sfifo_15x128_synth_1" Type="Ft3:Synth" SrcSet="v6_sfifo_15x128" Part="xc7a200tfbg676-2" ConstrsSet="v6_sfifo_15x128" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/v6_sfifo_15x128_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="v6_mBuf_128x72_synth_1" Type="Ft3:Synth" SrcSet="v6_mBuf_128x72" Part="xc7a200tfbg676-2" ConstrsSet="v6_mBuf_128x72" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/v6_mBuf_128x72_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="v6_eb_fifo_counted_resized_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="v6_eb_fifo_counted_resized" Description="Vivado Implementation Defaults" SynthRun="v6_eb_fifo_counted_resized_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="v6_sfifo_15x128_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="v6_sfifo_15x128" Description="Vivado Implementation Defaults" SynthRun="v6_sfifo_15x128_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="v6_mBuf_128x72_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="v6_mBuf_128x72" Description="Vivado Implementation Defaults" SynthRun="v6_mBuf_128x72_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
+          <Desc>Vivado Implementation Defaults</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+  </Runs>
+  <HWSession Dir="hw_1" File="hw.xml"/>
+</Project>

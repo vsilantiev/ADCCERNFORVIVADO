@@ -1,0 +1,260 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
+| Date         : Tue Feb 10 09:43:41 2015
+| Host         : ubuntu running 64-bit Ubuntu 12.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7a200tfbg676-2
+-----------------------------------------------------------------------------------
+
+Upgrade Log for IP 'v7_pcie'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of v7_pcie from xilinx.com:ip:pcie_7x:1.11 to xilinx.com:ip:pcie_7x:3.0 (Rev. 2)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+WARNING: Attempt to set value '0' on disabled parameter 'De_emph' is ignored for 'v7_pcie'
+
+WARNING: Attempt to set value '07FF07' on disabled parameter 'Optional_Error_Support' is ignored for 'v7_pcie'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  Please consult the warnings from the previous sections, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:ip:pcie_7x:3.0 -user_name v7_pcie
+set_property -dict "\
+  CONFIG.Bar0_64bit false \
+  CONFIG.BAR4_Size_Vector 1M \
+  CONFIG.BAR_Index_Value5 0 \
+  CONFIG.Device_Port_Type PCI_Express_Endpoint_device \
+  CONFIG.Upconfigure_Capable true \
+  CONFIG.PCI_CFG_Space false \
+  CONFIG.Bar3_Type N/A \
+  CONFIG.D2_Support false \
+  CONFIG.En_route_pme_to_ack false \
+  CONFIG.MSI_Enabled true \
+  CONFIG.Bar0_Type Memory \
+  CONFIG.En_route_err_ftl false \
+  CONFIG.Enable_Lane_Reversal false \
+  CONFIG.Max_Payload_Size 512_bytes \
+  CONFIG.Device_Specific_Initialization false \
+  CONFIG.Slot_Cap_Pwr_Ind false \
+  CONFIG.Dll_Link_Active_Cap false \
+  CONFIG.En_route_err_nfl false \
+  CONFIG.Slot_Cap_HotPlug_Cap false \
+  CONFIG.ACK_NAK_Timeout_Value 0000 \
+  CONFIG.Bar1_Prefetchable false \
+  CONFIG.D2_PME_Support true \
+  CONFIG.Subsystem_Vendor_ID 0084 \
+  CONFIG.AER_MC_Blocked_TLP false \
+  CONFIG.Class_Code_Sub 00 \
+  CONFIG.Expansion_Rom_Scale Kilobytes \
+  CONFIG.Enable_Slot_Clock_Cfg false \
+  CONFIG.Subsystem_ID ABB3 \
+  CONFIG.AER_Multiheader false \
+  CONFIG.Bar4_Size 2 \
+  CONFIG.BAR3_Size_Vector 1M \
+  CONFIG.ATOMICOP64_Completer_Supported false \
+  CONFIG.D1_Power_Consumed 0 \
+  CONFIG.AtomicOp_Routing_Supported false \
+  CONFIG.Bar1_Size 1 \
+  CONFIG.Bar3_Enabled false \
+  CONFIG.D1_Power_Dissipated 0 \
+  CONFIG.ARI_Forwarding_Supported false \
+  CONFIG.Device_ID 6024 \
+  CONFIG.Slot_Cap_Attn_Ind false \
+  CONFIG.Disable_Rx_Poisoned_Resp false \
+  CONFIG.EXT_PCI_CFG_Space false \
+  CONFIG.Slot_Cap_Physical_Slot_Num 0 \
+  CONFIG.Bar0_Prefetchable false \
+  CONFIG.De_emph 0 \
+  CONFIG.PCIe_Debug_Ports false \
+  CONFIG.D3cold_PME_Support false \
+  CONFIG.Cpl_Timeout_Disable_Sup false \
+  CONFIG.DSN_Enabled true \
+  CONFIG.Cpl_Timeout_Range Range_B \
+  CONFIG.Legacy_Interrupt INTA \
+  CONFIG.D1_PME_Support true \
+  CONFIG.RBAR_Initial_Value0 0 \
+  CONFIG.D3_Power_Dissipated 0 \
+  CONFIG.RBAR_Initial_Value1 0 \
+  CONFIG.AER_Receiver_Error false \
+  CONFIG.RBAR_Initial_Value2 0 \
+  CONFIG.D3_Power_Consumed_Factor 0 \
+  CONFIG.RECRC_Check_Trim true \
+  CONFIG.RCB 64_byte \
+  CONFIG.RBAR_Initial_Value3 0 \
+  CONFIG.RBAR_Initial_Value4 0 \
+  CONFIG.PCI_CFG_Space_Addr 3F \
+  CONFIG.D1_Power_Dissipated_Factor 0 \
+  CONFIG.RBAR_Initial_Value5 0 \
+  CONFIG.Class_Code_Base 05 \
+  CONFIG.BAR2_Size_Vector 1M \
+  CONFIG.AER_ECRC_Gen_Capable false \
+  CONFIG.Disable_Tx_ASPM_L0s false \
+  CONFIG.RBAR_Num 0 \
+  CONFIG.Multiple_Message_Capable 1_vector \
+  CONFIG.UR_Atomic false \
+  CONFIG.AER_Surprise_Down false \
+  CONFIG.MSIx_Table_Offset 0 \
+  CONFIG.MSIx_PBA_BIR BAR_0 \
+  CONFIG.D3hot_PME_Support true \
+  CONFIG.Slot_Cap_HotPlug_Surprise false \
+  CONFIG.Ref_Clk_Freq 100_MHz \
+  CONFIG.AER_Uncorrectable_Internal_Error false \
+  CONFIG.Use_Class_Code_Lookup_Assistant false \
+  CONFIG.Receive_NP_Request false \
+  CONFIG.AER_ECRC_Check_Capable false \
+  CONFIG.D0_PME_Support true \
+  CONFIG.Bar5_Type N/A \
+  CONFIG.D1_Power_Consumed_Factor 0 \
+  CONFIG.Force_No_Scrambling false \
+  CONFIG.Bar2_Type Memory \
+  CONFIG.Trans_Buf_Pipeline None \
+  CONFIG.Slot_Cap_Pwr_Ctrl false \
+  CONFIG.BAR1_Size_Vector 1M \
+  CONFIG.TPH_Completer_Supported 00 \
+  CONFIG.MSIx_Enabled false \
+  CONFIG.Root_Cap_CRS false \
+  CONFIG.Bar0_Enabled true \
+  CONFIG.ATOMICOP32_Completer_Supported false \
+  CONFIG.Bar4_Enabled false \
+  CONFIG.en_ext_clk false \
+  CONFIG.D0_Power_Consumed 0 \
+  CONFIG.RBAR_Enabled false \
+  CONFIG.Pcie_fast_config None \
+  CONFIG.Component_Name v7_pcie \
+  CONFIG.Silicon_Rev GES_and_Production \
+  CONFIG.Vendor_ID 10EE \
+  CONFIG.AER_Correctable_Internal_Error false \
+  CONFIG.Bar3_Size 2 \
+  CONFIG.VC_Cap_Reject_Snoop false \
+  CONFIG.Enable_ACK_NAK_Timer false \
+  CONFIG.Hw_Auton_Spd_Disable false \
+  CONFIG.Bar0_Size 64 \
+  CONFIG.D0_Power_Dissipated_Factor 0 \
+  CONFIG.BAR0_Size_Vector 1M \
+  CONFIG.Perf_Level High \
+  CONFIG.Expansion_Rom_Size 2 \
+  CONFIG.Xlnx_Ref_Board None \
+  CONFIG.Link_Speed 5.0_GT/s \
+  CONFIG.IO_Base_Limit_Registers Disabled \
+  CONFIG.Cost_Table 1 \
+  CONFIG.AER_Enabled false \
+  CONFIG.Sub_Class_Interface_Menu Generic_XT_compatible_serial_controller \
+  CONFIG.Enable_Replay_Timer false \
+  CONFIG.En_route_pme_to false \
+  CONFIG.En_route_pm_pme false \
+  CONFIG.PCIe_Cap_Slot_Implemented false \
+  CONFIG.MSI_64b true \
+  CONFIG.Slot_Cap_Elec_Interlock false \
+  CONFIG.Replay_Timeout_Value 0000 \
+  CONFIG.D3_Power_Consumed 0 \
+  CONFIG.Maximum_Link_Width X4 \
+  CONFIG.mode_selection Basic \
+  CONFIG.Prefetchable_Memory_Base_Limit_Registers Disabled \
+  CONFIG.Trgt_Link_Speed 4'h2 \
+  CONFIG.AER_Permit_Root_Error_Update false \
+  CONFIG.AER_TLP_Prefix_Blocked false \
+  CONFIG.D0_Power_Dissipated 0 \
+  CONFIG.No_Soft_Reset true \
+  CONFIG.RECRC_Check 0 \
+  CONFIG.Expansion_Rom_Enabled false \
+  CONFIG.AER_ECRC_Error false \
+  CONFIG.AER_Receiver_Overflow false \
+  CONFIG.Bar1_Enabled true \
+  CONFIG.EXT_PCI_CFG_Space_Addr 3FF \
+  CONFIG.UR_PRS_RESPONSE false \
+  CONFIG.MSIx_PBA_Offset 0 \
+  CONFIG.Bar5_Scale Kilobytes \
+  CONFIG.Cardbus_CIS_Pointer 00000000 \
+  CONFIG.Bar5_Enabled false \
+  CONFIG.AER_Completion_Timeout false \
+  CONFIG.CAS128_Completer_Supported false \
+  CONFIG.Bar4_Type N/A \
+  CONFIG.Slot_Cap_Attn_Butn false \
+  CONFIG.D2_Power_Dissipated 0 \
+  CONFIG.En_route_inta false \
+  CONFIG.En_route_intb false \
+  CONFIG.En_route_intc false \
+  CONFIG.Bar1_Type Memory \
+  CONFIG.En_route_intd false \
+  CONFIG.Bar4_Scale Kilobytes \
+  CONFIG.AER_Completer_Abort false \
+  CONFIG.ASPM_Optionality false \
+  CONFIG.Bar5_Prefetchable false \
+  CONFIG.MSI_Vec_Mask false \
+  CONFIG.D3_Power_Dissipated_Factor 0 \
+  CONFIG.User_Clk_Freq 250 \
+  CONFIG.AER_AtomicOp_Egress_Blocked false \
+  CONFIG.Phantom_Functions No_function_number_bits_used \
+  CONFIG.Bar3_Scale Kilobytes \
+  CONFIG.Extended_Tag_Field false \
+  CONFIG.Downstream_Link_Num 00 \
+  CONFIG.Bar4_64bit false \
+  CONFIG.D1_Support false \
+  CONFIG.MSIx_Table_Size 1 \
+  CONFIG.VSEC_Enabled false \
+  CONFIG.Revision_ID 06 \
+  CONFIG.Bar5_Size 2 \
+  CONFIG.D2_Power_Consumed_Factor 0 \
+  CONFIG.Replay_Timeout_Func Add \
+  CONFIG.pipe_sim false \
+  CONFIG.Slot_Cap_Pwr_Limit_Value 0 \
+  CONFIG.Extended_Tag_Default false \
+  CONFIG.Interface_Width 64_bit \
+  CONFIG.Bar2_Size 512 \
+  CONFIG.Slot_Cap_Pwr_Limit_Scale 0 \
+  CONFIG.Base_Class_Menu Simple_communication_controllers \
+  CONFIG.Bar4_Prefetchable false \
+  CONFIG.Bar2_Scale Kilobytes \
+  CONFIG.Acceptable_L1_Latency No_limit \
+  CONFIG.Bar3_64bit false \
+  CONFIG.Acceptable_L0s_Latency No_limit \
+  CONFIG.Optional_Error_Support 07FF07 \
+  CONFIG.En_route_unlock false \
+  CONFIG.Buf_Opt_BMA false \
+  CONFIG.IntX_Generation true \
+  CONFIG.D2_Power_Consumed 0 \
+  CONFIG.Class_Code_Interface 00 \
+  CONFIG.Bar1_Scale Megabytes \
+  CONFIG.BAR5_Size_Vector 1M \
+  CONFIG.Bar2_64bit false \
+  CONFIG.Slot_Cap_No_Cmd_Comp_Sup false \
+  CONFIG.Bar2_Enabled true \
+  CONFIG.D0_Power_Consumed_Factor 0 \
+  CONFIG.AER_Header_Log_Overflow false \
+  CONFIG.Bar3_Prefetchable false \
+  CONFIG.Cpl_Finite false \
+  CONFIG.Slot_Cap_MRL false \
+  CONFIG.UR_INV_REQ false \
+  CONFIG.AER_ACS_Violation false \
+  CONFIG.PCIe_Blk_Locn X0Y0 \
+  CONFIG.Bar0_Scale Kilobytes \
+  CONFIG.En_route_err_cor false \
+  CONFIG.Bar1_64bit false \
+  CONFIG.ACK_NAK_Timeout_Func Absolute \
+  CONFIG.MSIx_Table_BIR BAR_0 \
+  CONFIG.VC_Cap_Enabled false \
+  CONFIG.BAR_Index_Value0 0 \
+  CONFIG.AER_Flow_Control_Protocol_Error false \
+  CONFIG.BAR_Index_Value1 0 \
+  CONFIG.D2_Power_Dissipated_Factor 0 \
+  CONFIG.BAR_Index_Value2 0 \
+  CONFIG.Bar2_Prefetchable false \
+  CONFIG.BAR_Index_Value3 0 \
+  CONFIG.BAR_Index_Value4 0 " [get_ips v7_pcie]
+
+
