@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1423561800">
+<GenRun Id="impl_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1423659527">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="RDI-RDI" Name="v6pcieDMA.vdi"/>
   <File Type="BG-DRC" Name="v6pcieDMA.drc"/>
@@ -60,9 +60,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
-      <Desc>Vivado Implementation Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -73,6 +71,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="pcie_7x_0"/>
   <BlockFileSet Type="BlockSrcs" Name="v6_sfifo_15x128"/>
   <BlockFileSet Type="BlockSrcs" Name="v6_mBuf_128x72"/>
   <BlockFileSet Type="BlockSrcs" Name="v6_eb_fifo_counted_resized"/>

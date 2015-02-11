@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
-| Date             : Tue Feb 10 12:55:38 2015
+| Date             : Wed Feb 11 16:04:47 2015
 | Host             : ubuntu running 64-bit Ubuntu 12.04.5 LTS
 | Command          : report_power -file v6pcieDMA_power_routed.rpt -pb v6pcieDMA_power_summary_routed.pb
 | Design           : v6pcieDMA
@@ -30,13 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+-------+
-| Total On-Chip Power (W)  | 1.098 |
-| Dynamic (W)              | 0.926 |
-| Device Static (W)        | 0.172 |
-| Total Off-Chip Power (W) | 0.000 |
+| Total On-Chip Power (W)  | 1.339 |
+| Dynamic (W)              | 1.166 |
+| Device Static (W)        | 0.173 |
 | Effective TJA (C/W)      | 1.9   |
-| Max Ambient (C)          | 82.9  |
-| Junction Temperature (C) | 27.1  |
+| Max Ambient (C)          | 82.5  |
+| Junction Temperature (C) | 27.5  |
 | Confidence Level         | Low   |
 | Setting File             | ---   |
 | Simulation Activity File | ---   |
@@ -50,23 +49,23 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.081 |        6 |       --- |             --- |
-| Slice Logic             |     0.038 |    15681 |       --- |             --- |
-|   LUT as Logic          |     0.034 |     6647 |    133800 |            4.96 |
-|   CARRY4                |     0.002 |      272 |     33450 |            0.81 |
+| Clocks                  |     0.114 |        6 |       --- |             --- |
+| Slice Logic             |     0.041 |    15676 |       --- |             --- |
+|   LUT as Logic          |     0.036 |     6687 |    133800 |            4.99 |
 |   Register              |     0.002 |     7197 |    267600 |            2.68 |
-|   BUFG                  |    <0.001 |        4 |        32 |           12.50 |
-|   LUT as Shift Register |    <0.001 |      158 |     46200 |            0.34 |
+|   CARRY4                |     0.002 |      272 |     33450 |            0.81 |
+|   BUFG                  |    <0.001 |        3 |        32 |            9.37 |
+|   LUT as Shift Register |    <0.001 |      160 |     46200 |            0.34 |
 |   F7/F8 Muxes           |    <0.001 |       86 |    133800 |            0.06 |
 |   Others                |     0.000 |      476 |       --- |             --- |
-| Signals                 |     0.046 |    12123 |       --- |             --- |
+| Signals                 |     0.050 |    12115 |       --- |             --- |
 | Block RAM               |     0.043 |       66 |       365 |           18.08 |
 | MMCM                    |     0.160 |        2 |        10 |           20.00 |
 | PCIE                    |     0.058 |        1 |         1 |          100.00 |
 | I/O                     |     0.024 |       87 |       400 |           21.75 |
-| GTP                     |     0.475 |        4 |       --- |             --- |
-| Static Power            |     0.172 |          |           |                 |
-| Total                   |     1.098 |          |           |                 |
+| GTP                     |     0.676 |        4 |       --- |             --- |
+| Static Power            |     0.173 |          |           |                 |
+| Total                   |     1.339 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.314 |       0.281 |      0.033 |
+| Vccint    |       1.000 |     0.425 |       0.392 |      0.033 |
 | Vccaux    |       1.800 |     0.129 |       0.098 |      0.031 |
 | Vcco33    |       3.300 |     0.005 |       0.000 |      0.005 |
 | Vcco25    |       2.500 |     0.006 |       0.001 |      0.005 |
@@ -86,8 +85,8 @@ Table of Contents
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       0.000 |     0.000 |       0.000 |      0.000 |
 | Vccbram   |       1.000 |     0.005 |       0.003 |      0.001 |
-| MGTAVcc   |       1.000 |     0.190 |       0.187 |      0.003 |
-| MGTAVtt   |       1.200 |     0.234 |       0.229 |      0.005 |
+| MGTAVcc   |       1.000 |     0.300 |       0.297 |      0.003 |
+| MGTAVtt   |       1.200 |     0.250 |       0.245 |      0.005 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
 +-----------+-------------+-----------+-------------+------------+
 
@@ -95,17 +94,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
-| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
-| Device models               | High       | Device models are Production                           |                                                                                                                    |
-|                             |            |                                                        |                                                                                                                    |
-| Overall confidence level    | Low        |                                                        |                                                                                                                    |
-+-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings
@@ -150,7 +149,7 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| v6pcieDMA                                                                          |     0.926 |
+| v6pcieDMA                                                                          |     1.149 |
 |   LoopBack_FIFO_Off.queue_buffer0                                                  |     0.005 |
 |     U0_B2H                                                                         |     0.005 |
 |       U0                                                                           |     0.005 |
@@ -300,47 +299,47 @@ Table of Contents
 |     cmp_adc_serdes                                                                 |     0.019 |
 |     i2c_master_si570                                                               |    <0.001 |
 |   i_ack_mstr_reg_i_3                                                               |    <0.001 |
-|   make4Lanes.pcieCore                                                              |     0.700 |
-|     v7_pcie_i                                                                      |     0.700 |
-|       pcie_7x_0_i                                                                  |     0.591 |
-|         U0                                                                         |     0.591 |
-|           inst                                                                     |     0.591 |
-|             gt_top_i                                                               |     0.482 |
-|               gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst                     |     0.000 |
-|               gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst                     |     0.000 |
-|               gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst                     |     0.000 |
-|               gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst                     |     0.000 |
-|               pipe_wrapper_i                                                       |     0.482 |
-|                 gtp_pipe_reset.gtp_pipe_reset_i                                    |    <0.001 |
-|                 pipe_lane[0].gt_wrapper_i                                          |     0.131 |
+|   make4Lanes.pcieCore                                                              |     0.924 |
+|     v7_pcie_i                                                                      |     0.924 |
+|       pcie_7x_0_i                                                                  |     0.814 |
+|         U0                                                                         |     0.814 |
+|           inst                                                                     |     0.814 |
+|             gt_top_i                                                               |     0.702 |
+|               gt_rx_valid_filter[0].GT_RX_VALID_FILTER_7x_inst                     |    <0.001 |
+|               gt_rx_valid_filter[1].GT_RX_VALID_FILTER_7x_inst                     |    <0.001 |
+|               gt_rx_valid_filter[2].GT_RX_VALID_FILTER_7x_inst                     |    <0.001 |
+|               gt_rx_valid_filter[3].GT_RX_VALID_FILTER_7x_inst                     |    <0.001 |
+|               pipe_wrapper_i                                                       |     0.699 |
+|                 gtp_pipe_reset.gtp_pipe_reset_i                                    |     0.002 |
+|                 pipe_lane[0].gt_wrapper_i                                          |     0.169 |
 |                 pipe_lane[0].gtp_pipe_drp.gtp_pipe_drp_i                           |     0.001 |
-|                 pipe_lane[0].gtp_pipe_rate.gtp_pipe_rate_i                         |    <0.001 |
+|                 pipe_lane[0].gtp_pipe_rate.gtp_pipe_rate_i                         |     0.001 |
 |                 pipe_lane[0].pipe_eq.pipe_eq_i                                     |     0.000 |
 |                 pipe_lane[0].pipe_quad.gt_common_enabled.gt_common_int.gt_common_i |     0.001 |
 |                   qpll_drp_i                                                       |    <0.001 |
 |                   qpll_wrapper_i                                                   |    <0.001 |
 |                 pipe_lane[0].pipe_sync_i                                           |    <0.001 |
-|                 pipe_lane[0].pipe_user_i                                           |    <0.001 |
-|                 pipe_lane[1].gt_wrapper_i                                          |     0.115 |
+|                 pipe_lane[0].pipe_user_i                                           |     0.002 |
+|                 pipe_lane[1].gt_wrapper_i                                          |     0.169 |
 |                 pipe_lane[1].gtp_pipe_drp.gtp_pipe_drp_i                           |     0.001 |
-|                 pipe_lane[1].gtp_pipe_rate.gtp_pipe_rate_i                         |    <0.001 |
+|                 pipe_lane[1].gtp_pipe_rate.gtp_pipe_rate_i                         |     0.001 |
 |                 pipe_lane[1].pipe_eq.pipe_eq_i                                     |     0.000 |
 |                 pipe_lane[1].pipe_sync_i                                           |    <0.001 |
-|                 pipe_lane[1].pipe_user_i                                           |    <0.001 |
-|                 pipe_lane[2].gt_wrapper_i                                          |     0.115 |
+|                 pipe_lane[1].pipe_user_i                                           |     0.002 |
+|                 pipe_lane[2].gt_wrapper_i                                          |     0.169 |
 |                 pipe_lane[2].gtp_pipe_drp.gtp_pipe_drp_i                           |     0.001 |
-|                 pipe_lane[2].gtp_pipe_rate.gtp_pipe_rate_i                         |    <0.001 |
+|                 pipe_lane[2].gtp_pipe_rate.gtp_pipe_rate_i                         |     0.001 |
 |                 pipe_lane[2].pipe_eq.pipe_eq_i                                     |     0.000 |
 |                 pipe_lane[2].pipe_sync_i                                           |    <0.001 |
-|                 pipe_lane[2].pipe_user_i                                           |    <0.001 |
-|                 pipe_lane[3].gt_wrapper_i                                          |     0.115 |
+|                 pipe_lane[2].pipe_user_i                                           |     0.002 |
+|                 pipe_lane[3].gt_wrapper_i                                          |     0.169 |
 |                 pipe_lane[3].gtp_pipe_drp.gtp_pipe_drp_i                           |     0.001 |
-|                 pipe_lane[3].gtp_pipe_rate.gtp_pipe_rate_i                         |    <0.001 |
+|                 pipe_lane[3].gtp_pipe_rate.gtp_pipe_rate_i                         |     0.001 |
 |                 pipe_lane[3].pipe_eq.pipe_eq_i                                     |     0.000 |
 |                 pipe_lane[3].pipe_sync_i                                           |    <0.001 |
-|                 pipe_lane[3].pipe_user_i                                           |    <0.001 |
+|                 pipe_lane[3].pipe_user_i                                           |     0.002 |
 |                 qpll_reset.qpll_reset_i                                            |    <0.001 |
-|             pcie_top_i                                                             |     0.109 |
+|             pcie_top_i                                                             |     0.113 |
 |               axi_basic_top_i                                                      |     0.004 |
 |                 rx_inst                                                            |     0.003 |
 |                   rx_null_gen_inst                                                 |    <0.001 |
@@ -368,16 +367,16 @@ Table of Contents
 |                       use_tdp.ramb36                                               |     0.005 |
 |                     brams[3].ram                                                   |     0.005 |
 |                       use_tdp.ramb36                                               |     0.005 |
-|               pcie_pipe_pipeline_i                                                 |     0.000 |
-|                 pipe_lane_0_i                                                      |     0.000 |
-|                 pipe_lane_2.pipe_lane_1_i                                          |     0.000 |
-|                 pipe_lane_4.pipe_lane_2_i                                          |     0.000 |
-|                 pipe_lane_4.pipe_lane_3_i                                          |     0.000 |
-|                 pipe_misc_i                                                        |     0.000 |
+|               pcie_pipe_pipeline_i                                                 |     0.004 |
+|                 pipe_lane_0_i                                                      |    <0.001 |
+|                 pipe_lane_2.pipe_lane_1_i                                          |    <0.001 |
+|                 pipe_lane_4.pipe_lane_2_i                                          |    <0.001 |
+|                 pipe_lane_4.pipe_lane_3_i                                          |    <0.001 |
+|                 pipe_misc_i                                                        |    <0.001 |
 |       pipe_clock_i                                                                 |     0.109 |
-|   theTlpControl                                                                    |     0.140 |
+|   theTlpControl                                                                    |     0.139 |
 |     Memory_Space                                                                   |     0.040 |
-|     rx_Itf                                                                         |     0.076 |
+|     rx_Itf                                                                         |     0.075 |
 |       CplD_Channel                                                                 |     0.004 |
 |       Downstream_DMA_Engine                                                        |     0.025 |
 |         DMA_DSP_Buffer                                                             |     0.004 |
@@ -396,7 +395,7 @@ Table of Contents
 |                     gsm.sm                                                         |     0.002 |
 |                       gsm1.sm1                                                     |     0.001 |
 |                   rstblk                                                           |    <0.001 |
-|         ds_DMA_Calculation                                                         |     0.011 |
+|         ds_DMA_Calculation                                                         |     0.010 |
 |         ds_DMA_StateMachine                                                        |     0.006 |
 |       Intrpt_Handle                                                                |     0.003 |
 |       MRd_Channel                                                                  |     0.009 |
@@ -405,7 +404,7 @@ Table of Contents
 |             inst_fifo_gen                                                          |     0.004 |
 |               gconvfifo.rf                                                         |     0.004 |
 |                 grf.rf                                                             |     0.004 |
-|                   gntv_or_sync_fifo.gl1.lsshft                                     |     0.002 |
+|                   gntv_or_sync_fifo.gl1.lsshft                                     |     0.001 |
 |                     c0                                                             |    <0.001 |
 |                     c1                                                             |    <0.001 |
 |                     crd                                                            |    <0.001 |
@@ -437,7 +436,7 @@ Table of Contents
 |                       gsm1.sm1                                                     |     0.001 |
 |                   rstblk                                                           |    <0.001 |
 |         us_DMA_Calculation                                                         |     0.015 |
-|         us_DMA_StateMachine                                                        |     0.006 |
+|         us_DMA_StateMachine                                                        |     0.007 |
 |     tx_Itf                                                                         |     0.024 |
 |       ABB_Tx_MBuffer                                                               |     0.003 |
 |         U0                                                                         |     0.003 |

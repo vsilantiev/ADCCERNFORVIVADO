@@ -27,7 +27,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "init_design", "begin" );
+ISETouchFile( "write_bitstream", "begin" );
 ISEStep( "vivado",
          "-log v6pcieDMA.vdi -applog -m64 -messageDb vivado.pb -mode batch -source v6pcieDMA.tcl -notrace" );
 

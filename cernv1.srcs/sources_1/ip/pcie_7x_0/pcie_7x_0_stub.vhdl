@@ -1,10 +1,10 @@
 -- Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
--- Date        : Tue Feb 10 08:59:32 2015
+-- Date        : Wed Feb 11 14:43:48 2015
 -- Host        : ubuntu running 64-bit Ubuntu 12.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/vladimir/TESTDIFFAC/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_stub.vhdl
+--               /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0_stub.vhdl
 -- Design      : pcie_7x_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a200tfbg676-2

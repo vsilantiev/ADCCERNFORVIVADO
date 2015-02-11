@@ -3,10 +3,8 @@
 # 
 
   set_param gui.test TreeTableDev
-  set_param xicom.use_bs_reader 1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
-set_msg_config -id {Labtools 27-147} -limit 4294967295
 create_project -in_memory -part xc7a200tfbg676-2
 set_property target_language VHDL [current_project]
 set_param project.compositeFile.enableAutoGeneration 0
@@ -17,15 +15,8 @@ add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_sy
 set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp]
 add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp
 set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp]
-
-read_ip /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
-set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp]
-set_property used_in_implementation false [get_files -all /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp]
-set_property used_in_implementation false [get_files -all /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc]
-set_property used_in_implementation false [get_files -all /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc]
-set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property is_locked true [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci]
-
+add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp
+set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp]
 read_verilog -library xil_defaultlib /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_pipe_clock.v
 read_vhdl -library xil_defaultlib {
   /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/MySource/v6abb64Package_efifo_elink.vhd
@@ -56,8 +47,6 @@ read_vhdl -library xil_defaultlib {
 read_xdc /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc
 set_property used_in_implementation false [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 read_xdc dont_buffer.xdc
 set_property used_in_implementation false [get_files dont_buffer.xdc]
 set_param synth.vivado.isSynthRun true

@@ -99,7 +99,7 @@ entity pcie_7x_0_core_top is
     CPL_TIMEOUT_DISABLE_SUPPORTED                  : string     := "FALSE";
     CPL_TIMEOUT_RANGES_SUPPORTED                   : bit_vector := X"2";
 
-    DEV_CAP_ENDPOINT_L0S_LATENCY                   : integer    := 7;
+    DEV_CAP_ENDPOINT_L0S_LATENCY                   : integer    := 0;
     DEV_CAP_ENDPOINT_L1_LATENCY                    : integer    := 7;
     DEV_CAP_EXT_TAG_SUPPORTED                      : string     := "FALSE";
     DEV_CAP_MAX_PAYLOAD_SUPPORTED                  : integer    := 2;
@@ -138,7 +138,7 @@ entity pcie_7x_0_core_top is
     LINK_CTRL2_DEEMPHASIS                          : string     := "FALSE";
     LINK_CTRL2_HW_AUTONOMOUS_SPEED_DISABLE         : string     := "FALSE";
     LINK_CTRL2_TARGET_LINK_SPEED                   : bit_vector := X"2";
-    LINK_STATUS_SLOT_CLOCK_CONFIG                  : string     := "FALSE";
+    LINK_STATUS_SLOT_CLOCK_CONFIG                  : string     := "TRUE";
 
     LL_ACK_TIMEOUT                                 : bit_vector := X"0000";
     LL_ACK_TIMEOUT_EN                              : string     := "FALSE";
@@ -223,14 +223,14 @@ entity pcie_7x_0_core_top is
     TL_TX_RAM_RADDR_LATENCY                        : integer    := 0;
     TL_TX_RAM_RDATA_LATENCY                        : integer    := 2;
     TL_TX_RAM_WRITE_LATENCY                        : integer    := 0;
-    TRN_NP_FC                                      : string     := "FALSE";
+    TRN_NP_FC                                      : string     := "TRUE";
     TRN_DW                                         : string     := "FALSE";
 
     UPCONFIG_CAPABLE                               : string     := "TRUE";
     UPSTREAM_FACING                                : string     := "TRUE";
     UR_ATOMIC                                      : string     := "FALSE";
-    UR_INV_REQ                                     : string     := "FALSE";
-    UR_PRS_RESPONSE                                : string     := "FALSE";
+    UR_INV_REQ                                     : string     := "TRUE";
+    UR_PRS_RESPONSE                                : string     := "TRUE";
     USER_CLK_FREQ                                  : integer    := 3;
     USER_CLK2_DIV2                                 : string     := "FALSE";
 
@@ -301,7 +301,7 @@ entity pcie_7x_0_core_top is
     PL_AUTO_CONFIG                                 : integer    := 0;
     PL_FAST_TRAIN                                  : string     := "FALSE";
 
-    PCIE_EXT_CLK                                   : string     := "FALSE";
+    PCIE_EXT_CLK                                   : string     := "TRUE";
 
     PCIE_EXT_GT_COMMON                             : string     := "FALSE";
     EXT_CH_GT_DRP                                  : string     := "FALSE";
@@ -816,7 +816,7 @@ end pcie_7x_0_core_top;
 
    attribute CORE_GENERATION_INFO : string;
    attribute CORE_GENERATION_INFO of pcie_7x : ARCHITECTURE is
-     "pcie_7x_0,pcie_7x_v3_0,{LINK_CAP_MAX_LINK_SPEED=1,LINK_CAP_MAX_LINK_WIDTH=4,PCIE_CAP_DEVICE_PORT_TYPE=0000,DEV_CAP_MAX_PAYLOAD_SUPPORTED=2,USER_CLK_FREQ=3,REF_CLK_FREQ=0,MSI_CAP_ON=TRUE,MSI_CAP_MULTIMSGCAP=0,MSI_CAP_MULTIMSG_EXTENSION=0,MSIX_CAP_ON=FALSE,TL_TX_RAM_RADDR_LATENCY=0,TL_TX_RAM_RDATA_LATENCY=2,TL_RX_RAM_RADDR_LATENCY=0,TL_RX_RAM_RDATA_LATENCY=2,TL_RX_RAM_WRITE_LATENCY=0,VC0_TX_LASTPACKET=29,VC0_RX_RAM_LIMIT=7FF,VC0_TOTAL_CREDITS_PH=32,VC0_TOTAL_CREDITS_PD=437,VC0_TOTAL_CREDITS_NPH=12,VC0_TOTAL_CREDITS_NPD=24,VC0_TOTAL_CREDITS_CH=36,VC0_TOTAL_CREDITS_CD=461,VC0_CPL_INFINITE=TRUE,DEV_CAP_PHANTOM_FUNCTIONS_SUPPORT=0,DEV_CAP_EXT_TAG_SUPPORTED=FALSE,LINK_STATUS_SLOT_CLOCK_CONFIG=TRUE,DISABLE_LANE_REVERSAL=TRUE,DISABLE_SCRAMBLING=FALSE,DSN_CAP_ON=TRUE,REVISION_ID=06,VC_CAP_ON=FALSE}";
+     "pcie_7x_0,pcie_7x_v3_0,{LINK_CAP_MAX_LINK_SPEED=2,LINK_CAP_MAX_LINK_WIDTH=4,PCIE_CAP_DEVICE_PORT_TYPE=0000,DEV_CAP_MAX_PAYLOAD_SUPPORTED=2,USER_CLK_FREQ=3,REF_CLK_FREQ=0,MSI_CAP_ON=TRUE,MSI_CAP_MULTIMSGCAP=0,MSI_CAP_MULTIMSG_EXTENSION=0,MSIX_CAP_ON=FALSE,TL_TX_RAM_RADDR_LATENCY=0,TL_TX_RAM_RDATA_LATENCY=2,TL_RX_RAM_RADDR_LATENCY=0,TL_RX_RAM_RDATA_LATENCY=2,TL_RX_RAM_WRITE_LATENCY=0,VC0_TX_LASTPACKET=29,VC0_RX_RAM_LIMIT=7FF,VC0_TOTAL_CREDITS_PH=32,VC0_TOTAL_CREDITS_PD=437,VC0_TOTAL_CREDITS_NPH=12,VC0_TOTAL_CREDITS_NPD=24,VC0_TOTAL_CREDITS_CH=36,VC0_TOTAL_CREDITS_CD=461,VC0_CPL_INFINITE=TRUE,DEV_CAP_PHANTOM_FUNCTIONS_SUPPORT=0,DEV_CAP_EXT_TAG_SUPPORTED=FALSE,LINK_STATUS_SLOT_CLOCK_CONFIG=TRUE,DISABLE_LANE_REVERSAL=TRUE,DISABLE_SCRAMBLING=FALSE,DSN_CAP_ON=TRUE,REVISION_ID=06,VC_CAP_ON=FALSE}";
 
     component pcie_7x_0_pcie_top is
       generic (
@@ -967,7 +967,7 @@ end pcie_7x_0_core_top;
         PL_AUTO_CONFIG                                 : integer    := 0;
 
         -- pragma synthesis_off
-        PL_FAST_TRAIN                                  : string     := "FALSE";
+        PL_FAST_TRAIN                                  : string     := "TRUE";
         -- pragma synthesis_on
 
         PM_ASPML0S_TIMEOUT                             : bit_vector := X"0000";
@@ -1498,7 +1498,7 @@ end pcie_7x_0_core_top;
         USER_CLK_FREQ                 : integer := 3;       -- 0 - 31.25 MHz, 1 - 62.5 MHz, 2 - 125 MHz, 3 - 250 MHz, 4 - 500Mhz
 
         -- pragma synthesis_off
-        PL_FAST_TRAIN                 : string  := "FALSE"; -- Simulation Speedup
+        PL_FAST_TRAIN                 : string  := "TRUE"; -- Simulation Speedup
         -- pragma synthesis_on
 
         PCIE_EXT_CLK                  : string  := "FALSE"; -- External Clock Enable

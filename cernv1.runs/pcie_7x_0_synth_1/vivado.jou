@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:08:52 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Wed Feb 11 14:42:51 2015
+# Process ID: 26655
+# Log file: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.vds
+# Journal file: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source pcie_7x_0.tcl

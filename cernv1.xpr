@@ -10,7 +10,7 @@
     <Option Name="Part" Val="xc7a200tfbg676-2"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
-    <Option Name="BoardPart" Val=""/>
+    <Option Name="BoardPart" Val="xilinx.com:ac701:part0:1.0"/>
     <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -242,60 +242,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/pcie_7x_0/pcie_7x_0.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0.dcp"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0_stub.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="doc/pcie_7x_v3_0_changelog.txt"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0.vho"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0.xml"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="synth/pcie_7x_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="synth/pcie_7x_0_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0-PCIE_X0Y0.xdc"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="sim/pcie_7x_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie2_top.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_top.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gt_common.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gt_wrapper.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gt_top.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gt_rx_valid_filter_7x.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_pipe_pipeline.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_pipe_misc.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_pipe_lane.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_brams_7x.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_bram_top_7x.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_bram_7x.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pcie_7x.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_tx.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_tx_thrtl_ctl.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_tx_pipeline.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_top.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_rx.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_rx_pipeline.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_axi_basic_rx_null_gen.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_rxeq_scan.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_qpll_wrapper.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_qpll_reset.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_qpll_drp.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_wrapper.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_user.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gtp_pipe_reset.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gtp_pipe_drp.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_gtp_pipe_rate.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_sync.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_reset.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_rate.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_eq.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_core_top.vhd"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="source/pcie_7x_0_pipe_drp.v"/>
-        <CompFileExtendedInfo CompFileName="pcie_7x_0.xci" FileRelPathName="pcie_7x_0_stub.vhdl"/>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="v6pcieDMA"/>
@@ -317,6 +263,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/imports/MySim/tf64_pcie_trn.v">
         <FileInfo>
           <Attr Name="Library" Val="xil_defaultlib"/>
@@ -375,49 +322,59 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="pcie_7x_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pcie_7x_0">
+      <File Path="$PSRCDIR/sources_1/ip/pcie_7x_0/pcie_7x_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="pcie_7x_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Runs Version="1" Minor="9">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a200tfbg676-2" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="v6_eb_fifo_counted_resized_synth_1" Type="Ft3:Synth" SrcSet="v6_eb_fifo_counted_resized" Part="xc7a200tfbg676-2" ConstrsSet="v6_eb_fifo_counted_resized" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/v6_eb_fifo_counted_resized_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="v6_sfifo_15x128_synth_1" Type="Ft3:Synth" SrcSet="v6_sfifo_15x128" Part="xc7a200tfbg676-2" ConstrsSet="v6_sfifo_15x128" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/v6_sfifo_15x128_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="v6_mBuf_128x72_synth_1" Type="Ft3:Synth" SrcSet="v6_mBuf_128x72" Part="xc7a200tfbg676-2" ConstrsSet="v6_mBuf_128x72" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/v6_mBuf_128x72_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="pcie_7x_0_synth_1" Type="Ft3:Synth" SrcSet="pcie_7x_0" Part="xc7a200tfbg676-2" ConstrsSet="pcie_7x_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/pcie_7x_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -432,9 +389,7 @@
     </Run>
     <Run Id="v6_eb_fifo_counted_resized_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="v6_eb_fifo_counted_resized" Description="Vivado Implementation Defaults" SynthRun="v6_eb_fifo_counted_resized_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -448,9 +403,7 @@
     </Run>
     <Run Id="v6_sfifo_15x128_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="v6_sfifo_15x128" Description="Vivado Implementation Defaults" SynthRun="v6_sfifo_15x128_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -464,9 +417,21 @@
     </Run>
     <Run Id="v6_mBuf_128x72_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="v6_mBuf_128x72" Description="Vivado Implementation Defaults" SynthRun="v6_mBuf_128x72_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="pcie_7x_0_impl_1" Type="Ft2:EntireDesign" Part="xc7a200tfbg676-2" ConstrsSet="pcie_7x_0" Description="Vivado Implementation Defaults" SynthRun="pcie_7x_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

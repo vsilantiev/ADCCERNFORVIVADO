@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="v6_sfifo_15x128_synth_1" LaunchDir="/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1" FlowId="Vivado Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+</Runs>
+
