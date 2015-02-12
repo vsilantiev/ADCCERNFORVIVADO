@@ -59,18 +59,18 @@ ENTITY pcie_7x_0 IS
     pci_exp_txn : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     pci_exp_rxp : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     pci_exp_rxn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    pipe_pclk_in : IN STD_LOGIC;
-    pipe_rxusrclk_in : IN STD_LOGIC;
-    pipe_rxoutclk_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    pipe_dclk_in : IN STD_LOGIC;
-    pipe_userclk1_in : IN STD_LOGIC;
-    pipe_userclk2_in : IN STD_LOGIC;
-    pipe_oobclk_in : IN STD_LOGIC;
-    pipe_mmcm_lock_in : IN STD_LOGIC;
-    pipe_txoutclk_out : OUT STD_LOGIC;
-    pipe_rxoutclk_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    pipe_pclk_sel_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    pipe_gen3_out : OUT STD_LOGIC;
+    int_pclk_out_slave : OUT STD_LOGIC;
+    int_pipe_rxusrclk_out : OUT STD_LOGIC;
+    int_rxoutclk_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    int_dclk_out : OUT STD_LOGIC;
+    int_mmcm_lock_out : OUT STD_LOGIC;
+    int_userclk1_out : OUT STD_LOGIC;
+    int_userclk2_out : OUT STD_LOGIC;
+    int_oobclk_out : OUT STD_LOGIC;
+    int_qplllock_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    int_qplloutclk_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    int_qplloutrefclk_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    int_pclk_sel_slave : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     user_clk_out : OUT STD_LOGIC;
     user_reset_out : OUT STD_LOGIC;
     user_lnk_up : OUT STD_LOGIC;
@@ -223,7 +223,6 @@ ENTITY pcie_7x_0 IS
     cfg_vc_tcvc_map : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
     sys_clk : IN STD_LOGIC;
     sys_rst_n : IN STD_LOGIC;
-    pipe_mmcm_rst_n : IN STD_LOGIC;
     pcie_drp_clk : IN STD_LOGIC;
     pcie_drp_en : IN STD_LOGIC;
     pcie_drp_we : IN STD_LOGIC;
@@ -748,24 +747,24 @@ ARCHITECTURE pcie_7x_0_arch OF pcie_7x_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF pcie_7x_0_arch : ARCHITECTURE IS "pcie_7x_0,pcie_7x_0_pcie2_top,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF pcie_7x_0_arch: ARCHITECTURE IS "pcie_7x_0,pcie_7x_0_pcie2_top,{x_ipProduct=Vivado 2014.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=pcie_7x,x_ipVersion=3.0,x_ipCoreRevision=2,x_ipLanguage=VHDL,c_component_name=pcie_7x_0,dev_port_type=0000,c_dev_port_type=0,c_header_type=00,c_upstream_facing=TRUE,max_lnk_wdt=000100,max_lnk_spd=1,c_gen1=false,pci_exp_int_freq=3,c_pcie_fast_config=0,bar_0=FFFF0000,bar_1=FFF00000,bar_2=FFF80000,bar_3=00000000,bar_4=00000000,bar_5=00000000,xrom_bar=00000000,cost_table=1,ven_id=10EE,dev_id=6024,rev_id=06,subsys_ven_id=0084,subsys_id=ABB3,class_code=050000,cardbus_cis_ptr=00000000,cap_ver=2,c_pcie_cap_slot_implemented=FALSE,mps=010,cmps=2,ext_tag_fld_sup=FALSE,c_dev_control_ext_tag_default=FALSE,phantm_func_sup=00,c_phantom_functions=0,ep_l0s_accpt_lat=000,c_ep_l0s_accpt_lat=0,ep_l1_accpt_lat=111,c_ep_l1_accpt_lat=7,c_cpl_timeout_disable_sup=FALSE,c_cpl_timeout_range=0010,c_cpl_timeout_ranges_sup=2,c_buf_opt_bma=TRUE,c_perf_level_high=TRUE,c_tx_last_tlp=29,c_rx_ram_limit=7FF,c_fc_ph=32,c_fc_pd=437,c_fc_nph=12,c_fc_npd=24,c_fc_cplh=36,c_fc_cpld=461,c_cpl_inf=TRUE,c_cpl_infinite=TRUE,c_dll_lnk_actv_cap=FALSE,c_trgt_lnk_spd=0,c_hw_auton_spd_disable=FALSE,c_de_emph=FALSE,slot_clk=TRUE,c_rcb=0,c_root_cap_crs=FALSE,c_slot_cap_attn_butn=FALSE,c_slot_cap_attn_ind=FALSE,c_slot_cap_pwr_ctrl=FALSE,c_slot_cap_pwr_ind=FALSE,c_slot_cap_hotplug_surprise=FALSE,c_slot_cap_hotplug_cap=FALSE,c_slot_cap_mrl=FALSE,c_slot_cap_elec_interlock=FALSE,c_slot_cap_no_cmd_comp_sup=FALSE,c_slot_cap_pwr_limit_value=0,c_slot_cap_pwr_limit_scale=0,c_slot_cap_physical_slot_num=0,intx=TRUE,int_pin=1,c_msi_cap_on=TRUE,c_pm_cap_next_ptr=48,c_msi_64b_addr=TRUE,c_msi=0,c_msi_mult_msg_extn=0,c_msi_per_vctr_mask_cap=FALSE,c_msix_cap_on=FALSE,c_msix_next_ptr=00,c_pcie_cap_next_ptr=00,c_msix_table_size=000,c_msix_table_offset=0,c_msix_table_bir=0,c_msix_pba_offset=0,c_msix_pba_bir=0,dsi=0,c_dsi_bool=FALSE,d1_sup=0,c_d1_support=FALSE,d2_sup=0,c_d2_support=FALSE,pme_sup=0F,c_pme_support=0F,no_soft_rst=TRUE,pwr_con_d0_state=00,con_scl_fctr_d0_state=0,pwr_con_d1_state=00,con_scl_fctr_d1_state=0,pwr_con_d2_state=00,con_scl_fctr_d2_state=0,pwr_con_d3_state=00,con_scl_fctr_d3_state=0,pwr_dis_d0_state=00,dis_scl_fctr_d0_state=0,pwr_dis_d1_state=00,dis_scl_fctr_d1_state=0,pwr_dis_d2_state=00,dis_scl_fctr_d2_state=0,pwr_dis_d3_state=00,dis_scl_fctr_d3_state=0,c_dsn_cap_enabled=TRUE,c_dsn_base_ptr=100,c_vc_cap_enabled=FALSE,c_vc_base_ptr=000,c_vc_cap_reject_snoop=FALSE,c_vsec_cap_enabled=FALSE,c_vsec_base_ptr=000,c_vsec_next_ptr=000,c_dsn_next_ptr=000,c_vc_next_ptr=000,c_pci_cfg_space_addr=3F,c_ext_pci_cfg_space_addr=3FF,c_last_cfg_dw=10C,c_enable_msg_route=00000000000,bram_lat=0,c_rx_raddr_lat=0,c_rx_rdata_lat=2,c_rx_write_lat=0,c_tx_raddr_lat=0,c_tx_rdata_lat=2,c_tx_write_lat=0,c_ll_ack_timeout_enable=FALSE,c_ll_ack_timeout_function=0,c_ll_ack_timeout=0000,c_ll_replay_timeout_enable=FALSE,c_ll_replay_timeout_func=1,c_ll_replay_timeout=0000,c_dis_lane_reverse=TRUE,c_upconfig_capable=TRUE,c_disable_scrambling=FALSE,c_disable_tx_aspm_l0s=FALSE,c_pcie_dbg_ports=TRUE,pci_exp_ref_freq=0,c_xlnx_ref_board=AC701,c_pcie_blk_locn=0,c_ur_atomic=FALSE,c_dev_cap2_atomicop32_completer_supported=FALSE,c_dev_cap2_atomicop64_completer_supported=FALSE,c_dev_cap2_cas128_completer_supported=FALSE,c_dev_cap2_tph_completer_supported=00,c_dev_cap2_ari_forwarding_supported=FALSE,c_dev_cap2_atomicop_routing_supported=FALSE,c_link_cap_aspm_optionality=FALSE,c_aer_cap_on=FALSE,c_aer_base_ptr=000,c_aer_cap_nextptr=000,c_aer_cap_ecrc_check_capable=FALSE,c_aer_cap_ecrc_gen_capable=FALSE,c_aer_cap_multiheader=FALSE,c_aer_cap_permit_rooterr_update=FALSE,c_rbar_cap_on=FALSE,c_rbar_base_ptr=000,c_rbar_cap_nextptr=000,c_rbar_num=0,c_rbar_cap_sup0=00001,c_rbar_cap_index0=0,c_rbar_cap_control_encodedbar0=00,c_rbar_cap_sup1=00001,c_rbar_cap_index1=0,c_rbar_cap_control_encodedbar1=00,c_rbar_cap_sup2=00001,c_rbar_cap_index2=0,c_rbar_cap_control_encodedbar2=00,c_rbar_cap_sup3=00001,c_rbar_cap_index3=0,c_rbar_cap_control_encodedbar3=00,c_rbar_cap_sup4=00001,c_rbar_cap_index4=0,c_rbar_cap_control_encodedbar4=00,c_rbar_cap_sup5=00001,c_rbar_cap_index5=0,c_rbar_cap_control_encodedbar5=00,c_recrc_check=0,c_recrc_check_trim=FALSE,c_disable_rx_poisoned_resp=FALSE,c_trn_np_fc=TRUE,c_ur_inv_req=TRUE,c_ur_prs_response=TRUE,c_silicon_rev=2,c_aer_cap_optional_err_support=000000,LINK_CAP_MAX_LINK_WIDTH=4,C_DATA_WIDTH=64,PIPE_SIM=FALSE,PCIE_EXT_CLK=TRUE,PCIE_EXT_GT_COMMON=FALSE,EXT_CH_GT_DRP=FALSE,TRANSCEIVER_CTRL_STATUS_PORTS=FALSE,SHARED_LOGIC_IN_CORE=FALSE,ERR_REPORTING_IF=TRUE,PL_INTERFACE=TRUE,CFG_MGMT_IF=TRUE,CFG_CTL_IF=TRUE,CFG_STATUS_IF=TRUE,RCV_MSG_IF=TRUE,CFG_FC_IF=TRUE,EXT_PIPE_INTERFACE=FALSE,EXT_STARTUP_PRIMITIVE=FALSE,KEEP_WIDTH=8}";
+  ATTRIBUTE CORE_GENERATION_INFO OF pcie_7x_0_arch: ARCHITECTURE IS "pcie_7x_0,pcie_7x_0_pcie2_top,{x_ipProduct=Vivado 2014.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=pcie_7x,x_ipVersion=3.0,x_ipCoreRevision=2,x_ipLanguage=VHDL,c_component_name=pcie_7x_0,dev_port_type=0000,c_dev_port_type=0,c_header_type=00,c_upstream_facing=TRUE,max_lnk_wdt=000100,max_lnk_spd=2,c_gen1=true,pci_exp_int_freq=3,c_pcie_fast_config=0,bar_0=FFFF0000,bar_1=FFF00000,bar_2=FFF80000,bar_3=00000000,bar_4=00000000,bar_5=00000000,xrom_bar=00000000,cost_table=1,ven_id=10EE,dev_id=6024,rev_id=06,subsys_ven_id=0084,subsys_id=ABB3,class_code=050000,cardbus_cis_ptr=00000000,cap_ver=2,c_pcie_cap_slot_implemented=FALSE,mps=010,cmps=2,ext_tag_fld_sup=FALSE,c_dev_control_ext_tag_default=FALSE,phantm_func_sup=00,c_phantom_functions=0,ep_l0s_accpt_lat=000,c_ep_l0s_accpt_lat=0,ep_l1_accpt_lat=111,c_ep_l1_accpt_lat=7,c_cpl_timeout_disable_sup=FALSE,c_cpl_timeout_range=0010,c_cpl_timeout_ranges_sup=2,c_buf_opt_bma=TRUE,c_perf_level_high=TRUE,c_tx_last_tlp=29,c_rx_ram_limit=7FF,c_fc_ph=32,c_fc_pd=437,c_fc_nph=12,c_fc_npd=24,c_fc_cplh=36,c_fc_cpld=461,c_cpl_inf=TRUE,c_cpl_infinite=TRUE,c_dll_lnk_actv_cap=FALSE,c_trgt_lnk_spd=2,c_hw_auton_spd_disable=FALSE,c_de_emph=FALSE,slot_clk=TRUE,c_rcb=0,c_root_cap_crs=FALSE,c_slot_cap_attn_butn=FALSE,c_slot_cap_attn_ind=FALSE,c_slot_cap_pwr_ctrl=FALSE,c_slot_cap_pwr_ind=FALSE,c_slot_cap_hotplug_surprise=FALSE,c_slot_cap_hotplug_cap=FALSE,c_slot_cap_mrl=FALSE,c_slot_cap_elec_interlock=FALSE,c_slot_cap_no_cmd_comp_sup=FALSE,c_slot_cap_pwr_limit_value=0,c_slot_cap_pwr_limit_scale=0,c_slot_cap_physical_slot_num=0,intx=TRUE,int_pin=1,c_msi_cap_on=TRUE,c_pm_cap_next_ptr=48,c_msi_64b_addr=TRUE,c_msi=0,c_msi_mult_msg_extn=0,c_msi_per_vctr_mask_cap=FALSE,c_msix_cap_on=FALSE,c_msix_next_ptr=00,c_pcie_cap_next_ptr=00,c_msix_table_size=000,c_msix_table_offset=0,c_msix_table_bir=0,c_msix_pba_offset=0,c_msix_pba_bir=0,dsi=0,c_dsi_bool=FALSE,d1_sup=0,c_d1_support=FALSE,d2_sup=0,c_d2_support=FALSE,pme_sup=0F,c_pme_support=0F,no_soft_rst=TRUE,pwr_con_d0_state=00,con_scl_fctr_d0_state=0,pwr_con_d1_state=00,con_scl_fctr_d1_state=0,pwr_con_d2_state=00,con_scl_fctr_d2_state=0,pwr_con_d3_state=00,con_scl_fctr_d3_state=0,pwr_dis_d0_state=00,dis_scl_fctr_d0_state=0,pwr_dis_d1_state=00,dis_scl_fctr_d1_state=0,pwr_dis_d2_state=00,dis_scl_fctr_d2_state=0,pwr_dis_d3_state=00,dis_scl_fctr_d3_state=0,c_dsn_cap_enabled=TRUE,c_dsn_base_ptr=100,c_vc_cap_enabled=FALSE,c_vc_base_ptr=000,c_vc_cap_reject_snoop=FALSE,c_vsec_cap_enabled=FALSE,c_vsec_base_ptr=000,c_vsec_next_ptr=000,c_dsn_next_ptr=000,c_vc_next_ptr=000,c_pci_cfg_space_addr=3F,c_ext_pci_cfg_space_addr=3FF,c_last_cfg_dw=10C,c_enable_msg_route=00000000000,bram_lat=0,c_rx_raddr_lat=0,c_rx_rdata_lat=2,c_rx_write_lat=0,c_tx_raddr_lat=0,c_tx_rdata_lat=2,c_tx_write_lat=0,c_ll_ack_timeout_enable=FALSE,c_ll_ack_timeout_function=0,c_ll_ack_timeout=0000,c_ll_replay_timeout_enable=FALSE,c_ll_replay_timeout_func=1,c_ll_replay_timeout=0000,c_dis_lane_reverse=TRUE,c_upconfig_capable=TRUE,c_disable_scrambling=FALSE,c_disable_tx_aspm_l0s=FALSE,c_pcie_dbg_ports=TRUE,pci_exp_ref_freq=0,c_xlnx_ref_board=NONE,c_pcie_blk_locn=0,c_ur_atomic=FALSE,c_dev_cap2_atomicop32_completer_supported=FALSE,c_dev_cap2_atomicop64_completer_supported=FALSE,c_dev_cap2_cas128_completer_supported=FALSE,c_dev_cap2_tph_completer_supported=00,c_dev_cap2_ari_forwarding_supported=FALSE,c_dev_cap2_atomicop_routing_supported=FALSE,c_link_cap_aspm_optionality=FALSE,c_aer_cap_on=FALSE,c_aer_base_ptr=000,c_aer_cap_nextptr=000,c_aer_cap_ecrc_check_capable=FALSE,c_aer_cap_ecrc_gen_capable=FALSE,c_aer_cap_multiheader=FALSE,c_aer_cap_permit_rooterr_update=FALSE,c_rbar_cap_on=FALSE,c_rbar_base_ptr=000,c_rbar_cap_nextptr=000,c_rbar_num=0,c_rbar_cap_sup0=00001,c_rbar_cap_index0=0,c_rbar_cap_control_encodedbar0=00,c_rbar_cap_sup1=00001,c_rbar_cap_index1=0,c_rbar_cap_control_encodedbar1=00,c_rbar_cap_sup2=00001,c_rbar_cap_index2=0,c_rbar_cap_control_encodedbar2=00,c_rbar_cap_sup3=00001,c_rbar_cap_index3=0,c_rbar_cap_control_encodedbar3=00,c_rbar_cap_sup4=00001,c_rbar_cap_index4=0,c_rbar_cap_control_encodedbar4=00,c_rbar_cap_sup5=00001,c_rbar_cap_index5=0,c_rbar_cap_control_encodedbar5=00,c_recrc_check=0,c_recrc_check_trim=FALSE,c_disable_rx_poisoned_resp=FALSE,c_trn_np_fc=TRUE,c_ur_inv_req=TRUE,c_ur_prs_response=TRUE,c_silicon_rev=2,c_aer_cap_optional_err_support=000000,LINK_CAP_MAX_LINK_WIDTH=4,C_DATA_WIDTH=64,PIPE_SIM=FALSE,PCIE_EXT_CLK=FALSE,PCIE_EXT_GT_COMMON=FALSE,EXT_CH_GT_DRP=FALSE,TRANSCEIVER_CTRL_STATUS_PORTS=FALSE,SHARED_LOGIC_IN_CORE=TRUE,ERR_REPORTING_IF=TRUE,PL_INTERFACE=TRUE,CFG_MGMT_IF=TRUE,CFG_CTL_IF=TRUE,CFG_STATUS_IF=TRUE,RCV_MSG_IF=TRUE,CFG_FC_IF=TRUE,EXT_PIPE_INTERFACE=FALSE,EXT_STARTUP_PRIMITIVE=FALSE,KEEP_WIDTH=8}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF pci_exp_txp: SIGNAL IS "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt txp";
   ATTRIBUTE X_INTERFACE_INFO OF pci_exp_txn: SIGNAL IS "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt txn";
   ATTRIBUTE X_INTERFACE_INFO OF pci_exp_rxp: SIGNAL IS "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt rxp";
   ATTRIBUTE X_INTERFACE_INFO OF pci_exp_rxn: SIGNAL IS "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt rxn";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_pclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock pclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_rxusrclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock rxusrclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_rxoutclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock rxoutclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_dclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock dclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_userclk1_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock userclk1_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_userclk2_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock userclk2_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_oobclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock oobclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_mmcm_lock_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock mmcm_lock_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_txoutclk_out: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock txoutclk_out";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_rxoutclk_out: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock rxoutclk_out";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_pclk_sel_out: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock pclk_sel_out";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_gen3_out: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock gen3_out";
+  ATTRIBUTE X_INTERFACE_INFO OF int_pclk_out_slave: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk pclk_slave";
+  ATTRIBUTE X_INTERFACE_INFO OF int_pipe_rxusrclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk pipe_rxusrclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_rxoutclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk rxoutclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_dclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk dclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_mmcm_lock_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk mmcm_lock";
+  ATTRIBUTE X_INTERFACE_INFO OF int_userclk1_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk usrclk1";
+  ATTRIBUTE X_INTERFACE_INFO OF int_userclk2_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk usrclk2";
+  ATTRIBUTE X_INTERFACE_INFO OF int_oobclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk oobclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_qplllock_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk qplllock";
+  ATTRIBUTE X_INTERFACE_INFO OF int_qplloutclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk qplloutclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_qplloutrefclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk qplloutrefclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_pclk_sel_slave: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk pclk_sel_slave";
   ATTRIBUTE X_INTERFACE_INFO OF user_clk_out: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK.user_clk_out CLK";
   ATTRIBUTE X_INTERFACE_INFO OF user_reset_out: SIGNAL IS "xilinx.com:signal:reset:1.0 RST.user_reset_out RST";
   ATTRIBUTE X_INTERFACE_INFO OF tx_buf_av: SIGNAL IS "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status tx_buf_av";
@@ -916,7 +915,6 @@ ARCHITECTURE pcie_7x_0_arch OF pcie_7x_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF cfg_vc_tcvc_map: SIGNAL IS "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status vc_tcvc_map";
   ATTRIBUTE X_INTERFACE_INFO OF sys_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK.sys_clk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF sys_rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 RST.sys_rst_n RST";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_mmcm_rst_n: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock mmcm_rst_n";
   ATTRIBUTE X_INTERFACE_INFO OF pcie_drp_en: SIGNAL IS "xilinx.com:interface:drp:1.0 drp DEN";
   ATTRIBUTE X_INTERFACE_INFO OF pcie_drp_we: SIGNAL IS "xilinx.com:interface:drp:1.0 drp DWE";
   ATTRIBUTE X_INTERFACE_INFO OF pcie_drp_addr: SIGNAL IS "xilinx.com:interface:drp:1.0 drp DADDR";
@@ -932,8 +930,8 @@ BEGIN
       c_header_type => "00",
       c_upstream_facing => "TRUE",
       max_lnk_wdt => "000100",
-      max_lnk_spd => "1",
-      c_gen1 => false,
+      max_lnk_spd => "2",
+      c_gen1 => true,
       pci_exp_int_freq => 3,
       c_pcie_fast_config => 0,
       bar_0 => "FFFF0000",
@@ -979,7 +977,7 @@ BEGIN
       c_cpl_inf => "TRUE",
       c_cpl_infinite => "TRUE",
       c_dll_lnk_actv_cap => "FALSE",
-      c_trgt_lnk_spd => "0",
+      c_trgt_lnk_spd => "2",
       c_hw_auton_spd_disable => "FALSE",
       c_de_emph => "FALSE",
       slot_clk => "TRUE",
@@ -1071,7 +1069,7 @@ BEGIN
       c_disable_tx_aspm_l0s => "FALSE",
       c_pcie_dbg_ports => "TRUE",
       pci_exp_ref_freq => "0",
-      c_xlnx_ref_board => "AC701",
+      c_xlnx_ref_board => "NONE",
       c_pcie_blk_locn => "0",
       c_ur_atomic => "FALSE",
       c_dev_cap2_atomicop32_completer_supported => "FALSE",
@@ -1121,11 +1119,11 @@ BEGIN
       LINK_CAP_MAX_LINK_WIDTH => 4,
       C_DATA_WIDTH => 64,
       PIPE_SIM => "FALSE",
-      PCIE_EXT_CLK => "TRUE",
+      PCIE_EXT_CLK => "FALSE",
       PCIE_EXT_GT_COMMON => "FALSE",
       EXT_CH_GT_DRP => "FALSE",
       TRANSCEIVER_CTRL_STATUS_PORTS => "FALSE",
-      SHARED_LOGIC_IN_CORE => "FALSE",
+      SHARED_LOGIC_IN_CORE => "TRUE",
       ERR_REPORTING_IF => "TRUE",
       PL_INTERFACE => "TRUE",
       CFG_MGMT_IF => "TRUE",
@@ -1142,19 +1140,26 @@ BEGIN
       pci_exp_txn => pci_exp_txn,
       pci_exp_rxp => pci_exp_rxp,
       pci_exp_rxn => pci_exp_rxn,
-      int_pclk_sel_slave => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      pipe_pclk_in => pipe_pclk_in,
-      pipe_rxusrclk_in => pipe_rxusrclk_in,
-      pipe_rxoutclk_in => pipe_rxoutclk_in,
-      pipe_dclk_in => pipe_dclk_in,
-      pipe_userclk1_in => pipe_userclk1_in,
-      pipe_userclk2_in => pipe_userclk2_in,
-      pipe_oobclk_in => pipe_oobclk_in,
-      pipe_mmcm_lock_in => pipe_mmcm_lock_in,
-      pipe_txoutclk_out => pipe_txoutclk_out,
-      pipe_rxoutclk_out => pipe_rxoutclk_out,
-      pipe_pclk_sel_out => pipe_pclk_sel_out,
-      pipe_gen3_out => pipe_gen3_out,
+      int_pclk_out_slave => int_pclk_out_slave,
+      int_pipe_rxusrclk_out => int_pipe_rxusrclk_out,
+      int_rxoutclk_out => int_rxoutclk_out,
+      int_dclk_out => int_dclk_out,
+      int_mmcm_lock_out => int_mmcm_lock_out,
+      int_userclk1_out => int_userclk1_out,
+      int_userclk2_out => int_userclk2_out,
+      int_oobclk_out => int_oobclk_out,
+      int_qplllock_out => int_qplllock_out,
+      int_qplloutclk_out => int_qplloutclk_out,
+      int_qplloutrefclk_out => int_qplloutrefclk_out,
+      int_pclk_sel_slave => int_pclk_sel_slave,
+      pipe_pclk_in => '0',
+      pipe_rxusrclk_in => '0',
+      pipe_rxoutclk_in => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
+      pipe_dclk_in => '0',
+      pipe_userclk1_in => '1',
+      pipe_userclk2_in => '0',
+      pipe_oobclk_in => '0',
+      pipe_mmcm_lock_in => '1',
       user_clk_out => user_clk_out,
       user_reset_out => user_reset_out,
       user_lnk_up => user_lnk_up,
@@ -1307,7 +1312,7 @@ BEGIN
       cfg_vc_tcvc_map => cfg_vc_tcvc_map,
       sys_clk => sys_clk,
       sys_rst_n => sys_rst_n,
-      pipe_mmcm_rst_n => pipe_mmcm_rst_n,
+      pipe_mmcm_rst_n => '1',
       startup_eos_in => '0',
       startup_clk => '0',
       startup_gsr => '0',

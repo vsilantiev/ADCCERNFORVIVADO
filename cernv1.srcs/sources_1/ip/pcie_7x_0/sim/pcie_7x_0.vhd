@@ -59,18 +59,18 @@ ENTITY pcie_7x_0 IS
     pci_exp_txn : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
     pci_exp_rxp : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     pci_exp_rxn : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    pipe_pclk_in : IN STD_LOGIC;
-    pipe_rxusrclk_in : IN STD_LOGIC;
-    pipe_rxoutclk_in : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-    pipe_dclk_in : IN STD_LOGIC;
-    pipe_userclk1_in : IN STD_LOGIC;
-    pipe_userclk2_in : IN STD_LOGIC;
-    pipe_oobclk_in : IN STD_LOGIC;
-    pipe_mmcm_lock_in : IN STD_LOGIC;
-    pipe_txoutclk_out : OUT STD_LOGIC;
-    pipe_rxoutclk_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    pipe_pclk_sel_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    pipe_gen3_out : OUT STD_LOGIC;
+    int_pclk_out_slave : OUT STD_LOGIC;
+    int_pipe_rxusrclk_out : OUT STD_LOGIC;
+    int_rxoutclk_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    int_dclk_out : OUT STD_LOGIC;
+    int_mmcm_lock_out : OUT STD_LOGIC;
+    int_userclk1_out : OUT STD_LOGIC;
+    int_userclk2_out : OUT STD_LOGIC;
+    int_oobclk_out : OUT STD_LOGIC;
+    int_qplllock_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    int_qplloutclk_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    int_qplloutrefclk_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+    int_pclk_sel_slave : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
     user_clk_out : OUT STD_LOGIC;
     user_reset_out : OUT STD_LOGIC;
     user_lnk_up : OUT STD_LOGIC;
@@ -223,7 +223,6 @@ ENTITY pcie_7x_0 IS
     cfg_vc_tcvc_map : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
     sys_clk : IN STD_LOGIC;
     sys_rst_n : IN STD_LOGIC;
-    pipe_mmcm_rst_n : IN STD_LOGIC;
     pcie_drp_clk : IN STD_LOGIC;
     pcie_drp_en : IN STD_LOGIC;
     pcie_drp_we : IN STD_LOGIC;
@@ -748,18 +747,18 @@ ARCHITECTURE pcie_7x_0_arch OF pcie_7x_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF pci_exp_txn: SIGNAL IS "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt txn";
   ATTRIBUTE X_INTERFACE_INFO OF pci_exp_rxp: SIGNAL IS "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt rxp";
   ATTRIBUTE X_INTERFACE_INFO OF pci_exp_rxn: SIGNAL IS "xilinx.com:interface:pcie_7x_mgt:1.0 pcie_7x_mgt rxn";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_pclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock pclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_rxusrclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock rxusrclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_rxoutclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock rxoutclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_dclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock dclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_userclk1_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock userclk1_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_userclk2_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock userclk2_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_oobclk_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock oobclk_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_mmcm_lock_in: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock mmcm_lock_in";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_txoutclk_out: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock txoutclk_out";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_rxoutclk_out: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock rxoutclk_out";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_pclk_sel_out: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock pclk_sel_out";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_gen3_out: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock gen3_out";
+  ATTRIBUTE X_INTERFACE_INFO OF int_pclk_out_slave: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk pclk_slave";
+  ATTRIBUTE X_INTERFACE_INFO OF int_pipe_rxusrclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk pipe_rxusrclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_rxoutclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk rxoutclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_dclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk dclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_mmcm_lock_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk mmcm_lock";
+  ATTRIBUTE X_INTERFACE_INFO OF int_userclk1_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk usrclk1";
+  ATTRIBUTE X_INTERFACE_INFO OF int_userclk2_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk usrclk2";
+  ATTRIBUTE X_INTERFACE_INFO OF int_oobclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk oobclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_qplllock_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk qplllock";
+  ATTRIBUTE X_INTERFACE_INFO OF int_qplloutclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk qplloutclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_qplloutrefclk_out: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk qplloutrefclk";
+  ATTRIBUTE X_INTERFACE_INFO OF int_pclk_sel_slave: SIGNAL IS "xilinx.com:interface:pcie_sharedlogic_int_clk:1.0 pcie_sharedlogic_int_clk pclk_sel_slave";
   ATTRIBUTE X_INTERFACE_INFO OF user_clk_out: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK.user_clk_out CLK";
   ATTRIBUTE X_INTERFACE_INFO OF user_reset_out: SIGNAL IS "xilinx.com:signal:reset:1.0 RST.user_reset_out RST";
   ATTRIBUTE X_INTERFACE_INFO OF tx_buf_av: SIGNAL IS "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status tx_buf_av";
@@ -910,7 +909,6 @@ ARCHITECTURE pcie_7x_0_arch OF pcie_7x_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF cfg_vc_tcvc_map: SIGNAL IS "xilinx.com:interface:pcie2_cfg_status:1.0 pcie2_cfg_status vc_tcvc_map";
   ATTRIBUTE X_INTERFACE_INFO OF sys_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK.sys_clk CLK";
   ATTRIBUTE X_INTERFACE_INFO OF sys_rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 RST.sys_rst_n RST";
-  ATTRIBUTE X_INTERFACE_INFO OF pipe_mmcm_rst_n: SIGNAL IS "xilinx.com:interface:pipe_clock:1.0 pipe_clock mmcm_rst_n";
   ATTRIBUTE X_INTERFACE_INFO OF pcie_drp_en: SIGNAL IS "xilinx.com:interface:drp:1.0 drp DEN";
   ATTRIBUTE X_INTERFACE_INFO OF pcie_drp_we: SIGNAL IS "xilinx.com:interface:drp:1.0 drp DWE";
   ATTRIBUTE X_INTERFACE_INFO OF pcie_drp_addr: SIGNAL IS "xilinx.com:interface:drp:1.0 drp DADDR";
@@ -926,8 +924,8 @@ BEGIN
       c_header_type => "00",
       c_upstream_facing => "TRUE",
       max_lnk_wdt => "000100",
-      max_lnk_spd => "1",
-      c_gen1 => false,
+      max_lnk_spd => "2",
+      c_gen1 => true,
       pci_exp_int_freq => 3,
       c_pcie_fast_config => 0,
       bar_0 => "FFFF0000",
@@ -973,7 +971,7 @@ BEGIN
       c_cpl_inf => "TRUE",
       c_cpl_infinite => "TRUE",
       c_dll_lnk_actv_cap => "FALSE",
-      c_trgt_lnk_spd => "0",
+      c_trgt_lnk_spd => "2",
       c_hw_auton_spd_disable => "FALSE",
       c_de_emph => "FALSE",
       slot_clk => "TRUE",
@@ -1065,7 +1063,7 @@ BEGIN
       c_disable_tx_aspm_l0s => "FALSE",
       c_pcie_dbg_ports => "TRUE",
       pci_exp_ref_freq => "0",
-      c_xlnx_ref_board => "AC701",
+      c_xlnx_ref_board => "NONE",
       c_pcie_blk_locn => "0",
       c_ur_atomic => "FALSE",
       c_dev_cap2_atomicop32_completer_supported => "FALSE",
@@ -1115,11 +1113,11 @@ BEGIN
       LINK_CAP_MAX_LINK_WIDTH => 4,
       C_DATA_WIDTH => 64,
       PIPE_SIM => "FALSE",
-      PCIE_EXT_CLK => "TRUE",
+      PCIE_EXT_CLK => "FALSE",
       PCIE_EXT_GT_COMMON => "FALSE",
       EXT_CH_GT_DRP => "FALSE",
       TRANSCEIVER_CTRL_STATUS_PORTS => "FALSE",
-      SHARED_LOGIC_IN_CORE => "FALSE",
+      SHARED_LOGIC_IN_CORE => "TRUE",
       ERR_REPORTING_IF => "TRUE",
       PL_INTERFACE => "TRUE",
       CFG_MGMT_IF => "TRUE",
@@ -1136,19 +1134,26 @@ BEGIN
       pci_exp_txn => pci_exp_txn,
       pci_exp_rxp => pci_exp_rxp,
       pci_exp_rxn => pci_exp_rxn,
-      int_pclk_sel_slave => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
-      pipe_pclk_in => pipe_pclk_in,
-      pipe_rxusrclk_in => pipe_rxusrclk_in,
-      pipe_rxoutclk_in => pipe_rxoutclk_in,
-      pipe_dclk_in => pipe_dclk_in,
-      pipe_userclk1_in => pipe_userclk1_in,
-      pipe_userclk2_in => pipe_userclk2_in,
-      pipe_oobclk_in => pipe_oobclk_in,
-      pipe_mmcm_lock_in => pipe_mmcm_lock_in,
-      pipe_txoutclk_out => pipe_txoutclk_out,
-      pipe_rxoutclk_out => pipe_rxoutclk_out,
-      pipe_pclk_sel_out => pipe_pclk_sel_out,
-      pipe_gen3_out => pipe_gen3_out,
+      int_pclk_out_slave => int_pclk_out_slave,
+      int_pipe_rxusrclk_out => int_pipe_rxusrclk_out,
+      int_rxoutclk_out => int_rxoutclk_out,
+      int_dclk_out => int_dclk_out,
+      int_mmcm_lock_out => int_mmcm_lock_out,
+      int_userclk1_out => int_userclk1_out,
+      int_userclk2_out => int_userclk2_out,
+      int_oobclk_out => int_oobclk_out,
+      int_qplllock_out => int_qplllock_out,
+      int_qplloutclk_out => int_qplloutclk_out,
+      int_qplloutrefclk_out => int_qplloutrefclk_out,
+      int_pclk_sel_slave => int_pclk_sel_slave,
+      pipe_pclk_in => '0',
+      pipe_rxusrclk_in => '0',
+      pipe_rxoutclk_in => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 4)),
+      pipe_dclk_in => '0',
+      pipe_userclk1_in => '1',
+      pipe_userclk2_in => '0',
+      pipe_oobclk_in => '0',
+      pipe_mmcm_lock_in => '1',
       user_clk_out => user_clk_out,
       user_reset_out => user_reset_out,
       user_lnk_up => user_lnk_up,
@@ -1301,7 +1306,7 @@ BEGIN
       cfg_vc_tcvc_map => cfg_vc_tcvc_map,
       sys_clk => sys_clk,
       sys_rst_n => sys_rst_n,
-      pipe_mmcm_rst_n => pipe_mmcm_rst_n,
+      pipe_mmcm_rst_n => '1',
       startup_eos_in => '0',
       startup_clk => '0',
       startup_gsr => '0',

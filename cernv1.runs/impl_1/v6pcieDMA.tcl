@@ -55,16 +55,14 @@ set rc [catch {
   set_property webtalk.parent_dir /home/vladimir/TESTDIFFAC/cernv1/cernv1.cache/wt [current_project]
   set_property parent.project_dir /home/vladimir/TESTDIFFAC/cernv1 [current_project]
   add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/v6pcieDMA.dcp
-  add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp
-  set_property netlist_only true [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp]
   add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp
   set_property netlist_only true [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp]
   add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp
   set_property netlist_only true [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp]
   add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp
   set_property netlist_only true [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp]
-  read_xdc -ref pcie_7x_0 -cells U0 /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc
-  set_property processing_order EARLY [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc]
+  add_files -quiet /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp
+  set_property netlist_only true [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp]
   read_xdc -mode out_of_context -ref v6_eb_fifo_counted_resized -cells U0 /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_ooc.xdc
   set_property processing_order EARLY [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_ooc.xdc]
   read_xdc -ref v6_eb_fifo_counted_resized -cells U0 /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc
@@ -77,6 +75,10 @@ set rc [catch {
   set_property processing_order EARLY [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72_ooc.xdc]
   read_xdc -ref v6_mBuf_128x72 -cells U0 /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc
   set_property processing_order EARLY [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc]
+  read_xdc -mode out_of_context -ref pcie_7x_0 -cells U0 /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc
+  set_property processing_order EARLY [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/synth/pcie_7x_0_ooc.xdc]
+  read_xdc -ref pcie_7x_0 -cells U0 /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc
+  set_property processing_order EARLY [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc]
   read_xdc /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc
   read_xdc -ref v6_eb_fifo_counted_resized -cells U0 /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc
   set_property processing_order LATE [get_files /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc]

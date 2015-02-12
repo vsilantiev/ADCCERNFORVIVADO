@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.2 (lin64) Build 932637 Wed Jun 11 13:08:52 MDT 2014
-| Date         : Tue Feb 10 12:53:50 2015
+| Date         : Thu Feb 12 10:02:59 2015
 | Host         : ubuntu running 64-bit Ubuntu 12.04.5 LTS
 | Command      : report_clock_utilization -file v6pcieDMA_clock_utilization_placed.rpt
 | Design       : v6pcieDMA
@@ -45,34 +45,34 @@ Table of Contents
 2. Details of Global Clocks
 ---------------------------
 
-+-------+---------------------------------------------------------------------+---------------------------------------------------+--------------+-------+---------------+-----------+
-|       |                                                                     |                                                   |   Num Loads  |       |               |           |
-+-------+---------------------------------------------------------------------+---------------------------------------------------+------+-------+-------+---------------+-----------+
-| Index | BUFG Cell                                                           | Net Name                                          | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
-+-------+---------------------------------------------------------------------+---------------------------------------------------+------+-------+-------+---------------+-----------+
-|     1 | cmp_fmc_adc_100Ms_core/cmp_fb_clk_buf                               | cmp_fmc_adc_100Ms_core/O_0                        |    1 |     1 |    no |         1.722 |     0.086 |
-|     2 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/txoutclk_i.txoutclk_i    | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/refclk |    1 |     1 |    no |         1.565 |     0.078 |
-|     3 | cmp_fmc_adc_100Ms_core/cmp_serdes_clk_buf                           | cmp_fmc_adc_100Ms_core/O2                         |   10 |    10 |    no |         2.514 |     0.578 |
-|     4 | cmp_fmc_adc_100Ms_core/cmp_fs_clk_buf                               | cmp_fmc_adc_100Ms_core/O1                         |  260 |   105 |    no |         2.514 |     1.186 |
-|     5 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/dclk_i_bufg.dclk_i       | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O3     |  348 |    92 |    no |         1.788 |     0.241 |
-|     6 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/pclk_i1_bufgctrl.pclk_i1 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O2     |  862 |   280 |    no |         1.788 |     0.241 |
-|     7 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/userclk1_i1.usrclk1_i1   | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4     | 6102 |  2001 |    no |         1.857 |     0.529 |
-+-------+---------------------------------------------------------------------+---------------------------------------------------+------+-------+-------+---------------+-----------+
++-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+--------------+-------+---------------+-----------+
+|       |                                                                                                                    |                                                                                                        |   Num Loads  |       |               |           |
++-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+| Index | BUFG Cell                                                                                                          | Net Name                                                                                               | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+|     1 | cmp_fmc_adc_100Ms_core/cmp_fb_clk_buf                                                                              | cmp_fmc_adc_100Ms_core/O_0                                                                             |    1 |     1 |    no |         1.722 |     0.086 |
+|     2 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/txoutclk_i.txoutclk_i    | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/refclk       |    1 |     1 |    no |         1.565 |     0.078 |
+|     3 | cmp_fmc_adc_100Ms_core/cmp_serdes_clk_buf                                                                          | cmp_fmc_adc_100Ms_core/O2                                                                              |   10 |    10 |    no |         2.514 |     0.578 |
+|     4 | cmp_fmc_adc_100Ms_core/cmp_fs_clk_buf                                                                              | cmp_fmc_adc_100Ms_core/O1                                                                              |  260 |   107 |    no |         2.514 |     1.186 |
+|     5 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_i_bufg.dclk_i       | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_DCLK     |  348 |   102 |    no |         1.788 |     0.241 |
+|     6 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_PCLK     |  862 |   304 |    no |         1.788 |     0.241 |
+|     7 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_i1.usrclk1_i1   | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1 | 6102 |  1927 |    no |         1.857 |     0.529 |
++-------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
 
 
-+-------+---------------------------------------------------+-------------------------------------------------------+--------------+-------+---------------+-----------+
-|       |                                                   |                                                       |   Num Loads  |       |               |           |
-+-------+---------------------------------------------------+-------------------------------------------------------+------+-------+-------+---------------+-----------+
-| Index | MMCM Cell                                         | Net Name                                              | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
-+-------+---------------------------------------------------+-------------------------------------------------------+------+-------+-------+---------------+-----------+
-|     1 | cmp_fmc_adc_100Ms_core/mmcm_adv_inst              | cmp_fmc_adc_100Ms_core/CLKFBOUT                       |    1 |     1 |    no |         1.766 |     0.088 |
-|     2 | cmp_fmc_adc_100Ms_core/mmcm_adv_inst              | cmp_fmc_adc_100Ms_core/CLKOUT0                        |    1 |     1 |    no |         1.766 |     0.088 |
-|     3 | cmp_fmc_adc_100Ms_core/mmcm_adv_inst              | cmp_fmc_adc_100Ms_core/CLKOUT1                        |    1 |     1 |    no |         1.766 |     0.088 |
-|     4 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/mmcm_i | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/clk_250mhz |    1 |     1 |    no |         1.559 |     0.078 |
-|     5 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/mmcm_i | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/mmcm_fb    |    1 |     1 |    no |         0.012 |     0.001 |
-|     6 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/mmcm_i | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/userclk1   |    1 |     1 |    no |         1.559 |     0.078 |
-|     7 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/mmcm_i | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/clk_125mhz |    2 |     2 |    no |         1.559 |     0.078 |
-+-------+---------------------------------------------------+-------------------------------------------------------+------+-------+-------+---------------+-----------+
++-------+--------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+--------------+-------+---------------+-----------+
+|       |                                                                                                  |                                                                                                      |   Num Loads  |       |               |           |
++-------+--------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+| Index | MMCM Cell                                                                                        | Net Name                                                                                             | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
++-------+--------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
+|     1 | cmp_fmc_adc_100Ms_core/mmcm_adv_inst                                                             | cmp_fmc_adc_100Ms_core/CLKFBOUT                                                                      |    1 |     1 |    no |         1.766 |     0.088 |
+|     2 | cmp_fmc_adc_100Ms_core/mmcm_adv_inst                                                             | cmp_fmc_adc_100Ms_core/CLKOUT0                                                                       |    1 |     1 |    no |         1.766 |     0.088 |
+|     3 | cmp_fmc_adc_100Ms_core/mmcm_adv_inst                                                             | cmp_fmc_adc_100Ms_core/CLKOUT1                                                                       |    1 |     1 |    no |         1.766 |     0.088 |
+|     4 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_250mhz |    1 |     1 |    no |         1.559 |     0.078 |
+|     5 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_fb    |    1 |     1 |    no |         0.012 |     0.001 |
+|     6 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1   |    1 |     1 |    no |         1.559 |     0.078 |
+|     7 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/clk_125mhz |    2 |     2 |    no |         1.559 |     0.078 |
++-------+--------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------+-------+-------+---------------+-----------+
 
 
 3. Details of Regional Clocks
@@ -92,7 +92,7 @@ Table of Contents
 +-------+---------------+----------+------+-------+-------+---------------+-----------+
 | Index | Local Clk Src | Net Name | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
 +-------+---------------+----------+------+-------+-------+---------------+-----------+
-|     1 | refclk_ibuf   | O0_in    |   65 |    23 |   yes |         0.130 |     0.130 |
+|     1 | refclk_ibuf   | O0_in    |   65 |    21 |   yes |         0.130 |     0.130 |
 +-------+---------------+----------+------+-------+-------+---------------+-----------+
 
 
@@ -110,10 +110,10 @@ Table of Contents
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 32000 |    0 |  5600 |    0 |    80 |    0 |    40 |    0 |    80 |
 | X0Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 28800 |    0 |  5600 |    0 |   100 |    0 |    50 |    0 |   100 |
 | X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 | 32000 |    0 |  5600 |    0 |    80 |    0 |    40 |    0 |    80 |
-| X0Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3656 | 28800 |  166 |  5600 |    0 |   100 |   29 |    50 |    0 |   100 |
-| X1Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   14 | 32000 |    0 |  5600 |    0 |    80 |   13 |    40 |    0 |    80 |
-| X0Y4              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    5 |     5 |    1 |     1 |    9 |    50 |    0 |    50 | 3514 | 20400 |  129 |  3000 |    0 |    50 |   21 |    25 |    0 |    60 |
-| X1Y4              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |   13 | 20000 |    0 |  3200 |    0 |    40 |    3 |    20 |    0 |    40 |
+| X0Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 | 3134 | 28800 |   76 |  5600 |    0 |   100 |   35 |    50 |    0 |   100 |
+| X1Y3              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   15 | 32000 |    0 |  5600 |    0 |    80 |   16 |    40 |    0 |    80 |
+| X0Y4              |    6 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    5 |     5 |    1 |     1 |    9 |    50 |    0 |    50 | 4036 | 20400 |  219 |  3000 |    0 |    50 |   15 |    25 |    0 |    60 |
+| X1Y4              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     5 |    0 |     0 |    0 |    50 |    0 |    50 |   12 | 20000 |    0 |  3200 |    0 |    40 |    0 |    20 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * RAMB36 site can be used as two RAMB18/FIFO18 sites
 
@@ -121,11 +121,11 @@ Table of Contents
 8. Net wise resources used in clock region X0Y2
 -----------------------------------------------
 
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
-| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                   Clock Net Name                  |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
-| BUFG        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/refclk |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+---------------------------------------------------+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                                          Clock Net Name                                          |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |   0 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/refclk |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------+
 
 
 9. Net wise resources used in clock region X1Y2
@@ -139,49 +139,48 @@ Table of Contents
 10. Net wise resources used in clock region X0Y3
 ------------------------------------------------
 
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------+
-| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                 Clock Net Name                |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------+
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |        29 |       0 |       0 |   66 |     0 |        0 | cmp_fmc_adc_100Ms_core/O1                     |
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |        29 |       0 |       0 | 3590 |   166 |        0 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4 |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                                             Clock Net Name                                             |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |        35 |       0 |       0 |  182 |     0 |        0 | cmp_fmc_adc_100Ms_core/O1                                                                              |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |        35 |       0 |       0 | 2952 |    76 |        0 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1 |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------------------------------------------------+
 
 
 11. Net wise resources used in clock region X1Y3
 ------------------------------------------------
 
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------+
-| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                 Clock Net Name                |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------+
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |        13 |       0 |       0 |   0 |     0 |        0 | cmp_fmc_adc_100Ms_core/O1                     |
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |        13 |       0 |       0 |  14 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4 |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                                             Clock Net Name                                             |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |        16 |       0 |       0 |   0 |     0 |        0 | cmp_fmc_adc_100Ms_core/O1                                                                              |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |        16 |       0 |       0 |  15 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1 |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------------+
 
 
 12. Net wise resources used in clock region X0Y4
 ------------------------------------------------
 
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------+
-| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                 Clock Net Name                |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------+
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       9 |       0 |    0 |     0 |        0 | cmp_fmc_adc_100Ms_core/O2                     |
-| BUFG        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |    0 |     0 |        0 | cmp_fmc_adc_100Ms_core/O_0                    |
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |        12 |       9 |       0 |  126 |     1 |        0 | cmp_fmc_adc_100Ms_core/O1                     |
-| BUFG        |     ---     |   no  |         0 |        0 |       5 |         0 |       0 |       0 |  343 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O3 |
-| BUFGCTRL    |     ---     |   no  |         0 |        0 |      16 |         0 |       0 |       0 |  857 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O2 |
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |        30 |       0 |       0 | 2124 |   128 |        0 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4 |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+-----------------------------------------------+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs |  FFs | LUTMs | DSP48E1s |                                             Clock Net Name                                             |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       9 |       0 |    0 |     0 |        0 | cmp_fmc_adc_100Ms_core/O2                                                                              |
+| BUFG        |     ---     |   no  |         1 |        0 |       0 |         0 |       0 |       0 |    0 |     0 |        0 | cmp_fmc_adc_100Ms_core/O_0                                                                             |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         6 |       9 |       0 |   10 |     1 |        0 | cmp_fmc_adc_100Ms_core/O1                                                                              |
+| BUFG        |     ---     |   no  |         0 |        0 |       5 |         0 |       0 |       0 |  343 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_DCLK     |
+| BUFGCTRL    |     ---     |   no  |         0 |        0 |      16 |         0 |       0 |       0 |  857 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_PCLK     |
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |        24 |       0 |       0 | 2762 |   218 |        0 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1 |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+------+-------+----------+--------------------------------------------------------------------------------------------------------+
 
 
 13. Net wise resources used in clock region X1Y4
 ------------------------------------------------
 
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------+
-| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                 Clock Net Name                |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------+
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |         3 |       0 |       0 |   0 |     0 |        0 | cmp_fmc_adc_100Ms_core/O1                     |
-| BUFG        |     ---     |   no  |         0 |        0 |       0 |         3 |       0 |       0 |  13 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4 |
-+-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+-----------------------------------------------+
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------------+
+| Source Type | BUFHCE Site | Fixed | MMCM Pins | PLL Pins | GT Pins | BRAM Pins | ILOGICs | OLOGICs | FFs | LUTMs | DSP48E1s |                                             Clock Net Name                                             |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------------+
+| BUFG        |     ---     |   no  |         0 |        0 |       0 |         0 |       0 |       0 |  12 |     0 |        0 | make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1 |
++-------------+-------------+-------+-----------+----------+---------+-----------+---------+---------+-----+-------+----------+--------------------------------------------------------------------------------------------------------+
 
 
 
@@ -189,16 +188,16 @@ Table of Contents
 set_property LOC BUFGCTRL_X0Y16 [get_cells cmp_fmc_adc_100Ms_core/cmp_fs_clk_buf]
 set_property LOC BUFGCTRL_X0Y17 [get_cells cmp_fmc_adc_100Ms_core/cmp_serdes_clk_buf]
 set_property LOC BUFGCTRL_X0Y18 [get_cells cmp_fmc_adc_100Ms_core/cmp_fb_clk_buf]
-set_property LOC BUFGCTRL_X0Y1 [get_cells make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/pclk_i1_bufgctrl.pclk_i1]
-set_property LOC BUFGCTRL_X0Y2 [get_cells make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/dclk_i_bufg.dclk_i]
-set_property LOC BUFGCTRL_X0Y0 [get_cells make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/userclk1_i1.usrclk1_i1]
-set_property LOC BUFGCTRL_X0Y19 [get_cells make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/txoutclk_i.txoutclk_i]
+set_property LOC BUFGCTRL_X0Y2 [get_cells make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_i_bufg.dclk_i]
+set_property LOC BUFGCTRL_X0Y1 [get_cells make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1]
+set_property LOC BUFGCTRL_X0Y0 [get_cells make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_i1.usrclk1_i1]
+set_property LOC BUFGCTRL_X0Y19 [get_cells make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/txoutclk_i.txoutclk_i]
 
 # Location of IO Clock Primitives
 
 # Location of MMCM Clock Primitives
 set_property LOC MMCME2_ADV_X0Y4 [get_cells cmp_fmc_adc_100Ms_core/mmcm_adv_inst]
-set_property LOC MMCME2_ADV_X0Y2 [get_cells make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/mmcm_i]
+set_property LOC MMCME2_ADV_X0Y2 [get_cells make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/mmcm_i]
 
 # Location of BUFH Clock Primitives
 
@@ -237,23 +236,23 @@ add_cells_to_pblock [get_pblocks  CLKAG_cmp_fmc_adc_100Ms_core/O2] [get_cells  -
 resize_pblock [get_pblocks CLKAG_cmp_fmc_adc_100Ms_core/O2] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
-# Clock net "make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O2" driven by instance "make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/pclk_i1_bufgctrl.pclk_i1" located at site "BUFGCTRL_X0Y1"
+# Clock net "make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_DCLK" driven by instance "make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/dclk_i_bufg.dclk_i" located at site "BUFGCTRL_X0Y2"
 #startgroup
-create_pblock CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O2
-add_cells_to_pblock [get_pblocks  CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O2] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O2"}]]]
-resize_pblock [get_pblocks CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O2] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+create_pblock CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_DCLK
+add_cells_to_pblock [get_pblocks  CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_DCLK] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_DCLK"}]]]
+resize_pblock [get_pblocks CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_DCLK] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
-# Clock net "make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O3" driven by instance "make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/dclk_i_bufg.dclk_i" located at site "BUFGCTRL_X0Y2"
+# Clock net "make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_PCLK" driven by instance "make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/pclk_i1_bufgctrl.pclk_i1" located at site "BUFGCTRL_X0Y1"
 #startgroup
-create_pblock CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O3
-add_cells_to_pblock [get_pblocks  CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O3] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O3"}]]]
-resize_pblock [get_pblocks CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O3] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+create_pblock CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_PCLK
+add_cells_to_pblock [get_pblocks  CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_PCLK] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_PCLK"}]]]
+resize_pblock [get_pblocks CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_PCLK] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup
 
-# Clock net "make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4" driven by instance "make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/userclk1_i1.usrclk1_i1" located at site "BUFGCTRL_X0Y0"
+# Clock net "make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1" driven by instance "make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/userclk1_i1.usrclk1_i1" located at site "BUFGCTRL_X0Y0"
 #startgroup
-create_pblock CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4
-add_cells_to_pblock [get_pblocks  CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4"}]]]
-resize_pblock [get_pblocks CLKAG_make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/O4] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
+create_pblock CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1
+add_cells_to_pblock [get_pblocks  CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1] [get_cells  -filter { IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL } -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1"}]]]
+resize_pblock [get_pblocks CLKAG_make4Lanes.pcieCore/v7_pcie_i/U0/inst/gt_top_i/pipe_wrapper_i/pipe_clock_int.pipe_clock_i/CLK_USERCLK1] -add {CLOCKREGION_X0Y0:CLOCKREGION_X0Y0 CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X0Y3:CLOCKREGION_X0Y3 CLOCKREGION_X0Y4:CLOCKREGION_X0Y4 CLOCKREGION_X1Y0:CLOCKREGION_X1Y0 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2 CLOCKREGION_X1Y3:CLOCKREGION_X1Y3 CLOCKREGION_X1Y4:CLOCKREGION_X1Y4}
 #endgroup

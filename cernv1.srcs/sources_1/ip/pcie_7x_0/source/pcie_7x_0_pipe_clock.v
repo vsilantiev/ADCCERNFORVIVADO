@@ -69,7 +69,7 @@ module pcie_7x_0_pipe_clock #
 
     parameter PCIE_ASYNC_EN      = "FALSE",                 // PCIe async enable
     parameter PCIE_TXBUF_EN      = "FALSE",                 // PCIe TX buffer enable for Gen1/Gen2 only
-    parameter PCIE_CLK_SHARING_EN= "FALSE",                 // Enable Clock Sharing
+    parameter PCIE_CLK_SHARING_EN= "TRUE",                 // Enable Clock Sharing
     parameter PCIE_LANE          = 1,                       // PCIe number of lanes
     parameter PCIE_LINK_SPEED    = 3,                       // PCIe link speed 
     parameter PCIE_REFCLK_FREQ   = 0,                       // PCIe reference clock frequency
@@ -130,7 +130,7 @@ module pcie_7x_0_pipe_clock #
                                            
     localparam          CLKOUT4_DIVIDE   = 20;
 
-    localparam          PCIE_GEN1_MODE    = 1'b1;             // PCIe link speed is GEN1 only
+    localparam          PCIE_GEN1_MODE    = 1'b0;             // PCIe link speed is GEN1 only
                                     
        
     //---------- Input Registers ---------------------------

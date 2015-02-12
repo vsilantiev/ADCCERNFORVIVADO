@@ -1,0 +1,335 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:08:52 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Wed Feb 11 16:30:49 2015
+# Process ID: 2319
+# Log file: /home/vladimir/TESTDIFFAC/cernv1/vivado.log
+# Journal file: /home/vladimir/TESTDIFFAC/cernv1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/vladimir/TESTDIFFAC/cernv1/cernv1.xpr
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/0.9/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/zynq/zc706/1.0/board_part.xml, The board part 'xc7z045ffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/0.9/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sim_1/imports/MySim/tf64_pcie_trn.v]
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_pipe_clock.v]
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.2/data/ip'.
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_pipe_clock.v]
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+[Wed Feb 11 16:32:28 2015] Launched synth_1...
+Run output will be captured here: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/runme.log
+[Wed Feb 11 16:32:28 2015] Launched impl_1...
+Run output will be captured here: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/runme.log
+open_hw
+connect_hw_server -host localhost -port 60001 -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2286] Connecting to vcse_server host localhost port 60001
+INFO: [Labtools 27-147] vcse_server: TCF plugin connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: TCF Plugin connection established with hw_server.
+INFO: [Labtools 27-147] vcse_server: TCF plugin connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: TCF Plugin connection established with hw_server.
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210203857267A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210203857267A]
+open_hw_target
+INFO: [Labtools 27-147] vcse_server: TCF plugin connecting to hw_server...
+INFO: [Labtools 27-147] vcse_server: TCF Plugin connection established with hw_server.
+set_property PROGRAM.FILE {/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/v6pcieDMA.bit} [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/v6pcieDMA.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2154] Reading 9730743 bytes from file /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/v6pcieDMA.bit...
+INFO: [Labtools 27-32] Done pin status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 4793.184 ; gain = 102.340
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_run synth_1 -name netlist_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a200tfbg676-2
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp' for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp' for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp' for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer'
+INFO: [Netlist 29-17] Analyzing 455 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+Loading clock regions from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/artix7/xc7a200t/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/artix7/xc7a200t/ClockBuffers.xml
+Loading clock placement rules from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/PinFunctions.xml...
+Loading package from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/artix7/xc7a200t/fbg676/Package.xml
+Loading io standards from /opt/Xilinx/Vivado/2014.2/data/./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ConfigModes.xml
+INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 9 OBUFs to IO ports without IO buffers.
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+INFO: [Timing 38-2] Deriving generated clocks [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0/wr_clk]'. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 5422.000 ; gain = 409.402
+CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:61]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+open_run: Time (s): cpu = 00:00:36 ; elapsed = 00:00:24 . Memory (MB): peak = 5573.469 ; gain = 780.285
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+can't use floating-point value as operand of "<<"
+set_property -dict [list CONFIG.Xlnx_Ref_Board {None}] [get_ips pcie_7x_0]
+generate_target all [get_files  /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'pcie_7x_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'pcie_7x_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'pcie_7x_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'pcie_7x_0'...
+generate_target: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 5573.469 ; gain = 0.000
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci]
+launch_run -jobs 4 pcie_7x_0_synth_1
+[Wed Feb 11 16:43:42 2015] Launched pcie_7x_0_synth_1...
+Run output will be captured here: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/runme.log
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp' for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp' for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer'
+INFO: [Netlist 29-17] Analyzing 420 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+CRITICAL WARNING: [Designutils 20-1275] Could not find cell 'U0' within module 'pcie_7x_0' for instance 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i'. The XDC file /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc will not be read for this cell.
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0/wr_clk]'. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 5573.469 ; gain = 0.000
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0/rd_clk]'. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:54]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:61]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+CRITICAL WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'pcie_7x_0' instantiated as 'pcie_7x_0_i' [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_support.vhd:677]
+refresh_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 5573.469 ; gain = 0.000
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp' for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp' for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp' for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i'
+INFO: [Netlist 29-17] Analyzing 455 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 9 OBUFs to IO ports without IO buffers.
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+INFO: [Timing 38-2] Deriving generated clocks [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0/wr_clk]'. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 5573.469 ; gain = 0.000
+CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:61]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+refresh_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:20 . Memory (MB): peak = 5576.301 ; gain = 2.832
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+WARNING: [filemgmt 20-1763] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_pipe_clock.v]
+WARNING: [Project 1-478] Design 'netlist_1' is stale and will not be used when launching 'impl_1'
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+[Wed Feb 11 16:45:36 2015] Launched synth_1...
+Run output will be captured here: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/synth_1/runme.log
+[Wed Feb 11 16:45:36 2015] Launched impl_1...
+Run output will be captured here: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/runme.log
+set_property PROBES.FILE {/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/v6pcieDMA.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2154] Reading 9730743 bytes from file /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/v6pcieDMA.bit...
+INFO: [Labtools 27-32] Done pin status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 5673.914 ; gain = 97.613
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a200t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp' for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp' for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp' for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i'
+INFO: [Netlist 29-17] Analyzing 455 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2014.2
+INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 9 OBUFs to IO ports without IO buffers.
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i/U0'
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+INFO: [Timing 38-2] Deriving generated clocks [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0/wr_clk]'. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
+get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 5673.918 ; gain = 0.000
+CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:61]
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72.xci
+INFO: [Memdata 28-152] Did  not create MIG processor data. /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+refresh_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:19 . Memory (MB): peak = 5673.918 ; gain = 0.004
+open_example_project -force -dir /home/vladimir/TESTDIFFAC/pcienoac [get_ips  pcie_7x_0]
+INFO: [IP_Flow 19-1686] Generating 'Examples' target for IP 'pcie_7x_0'...
+open_example_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 5673.918 ; gain = 0.000
+file delete -force /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_support.vhd
+remove_files {/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/cern.git/pcie_axi_trn_bridge.vhd /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_support.vhd}
+import_files -norecurse {/home/vladimir/TESTDIFFAC/pcienoac/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/example_design/xilinx_pcie_2_1_ep_7x.vhd /home/vladimir/TESTDIFFAC/pcienoac/pcie_7x_0_example/pcie_7x_0_example.srcs/sources_1/imports/pcie_7x_0/example_design/pcie_app_7x.vhd}
+file delete -force /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0
+remove_files -fileset pcie_7x_0 /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.xci
+delete_fileset pcie_7x_0
+file delete -force /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/example_design/xilinx_pcie_2_1_ep_7x.vhd /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_pipe_clock.v
+remove_files {/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/example_design/xilinx_pcie_2_1_ep_7x.vhd /home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/imports/support/pcie_7x_0_pipe_clock.v}
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 11 17:04:32 2015...

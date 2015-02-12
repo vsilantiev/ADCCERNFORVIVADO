@@ -111,13 +111,6 @@ set_property LOC IBUFDS_GTE2_X0Y2 [get_cells refclk_ibuf]
 #
 create_clock -name sys_clk_c -period 10 [get_pins refclk_ibuf/O]
 #
-# 
-set_false_path -to [get_pins {make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/pclk_i1_bufgctrl.pclk_i1/S0}]
-set_false_path -to [get_pins {make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/pclk_i1_bufgctrl.pclk_i1/S1}]
-#
-#
-set_case_analysis 1 [get_pins {make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/pclk_i1_bufgctrl.pclk_i1/S0}]
-set_case_analysis 0 [get_pins {make4Lanes.pcieCore/v7_pcie_i/pipe_clock_i/pclk_i1_bufgctrl.pclk_i1/S1}]
 # dco_p and dco_n are swapped compared to the FMC ADC schematics
 # this is to be coherent in the hdl design
 # LA00_N

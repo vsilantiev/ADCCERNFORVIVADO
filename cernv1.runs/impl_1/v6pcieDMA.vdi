@@ -2,8 +2,8 @@
 # Vivado v2014.2 (64-bit)
 # SW Build 932637 on Wed Jun 11 13:08:52 MDT 2014
 # IP Build 924643 on Fri May 30 09:20:16 MDT 2014
-# Start of session at: Tue Feb 10 12:52:01 2015
-# Process ID: 31074
+# Start of session at: Thu Feb 12 10:00:13 2015
+# Process ID: 27778
 # Log file: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/v6pcieDMA.vdi
 # Journal file: /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
@@ -14,12 +14,12 @@ CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Viv
 CRITICAL WARNING: [Board 49-4] Problem parsing board_part file - /opt/Xilinx/Vivado/2014.2/data/boards/board_parts/kintex7/kc705/1.0/board_part.xml, The board part 'xc7k325tffg900-2' is either not supported or invalid.
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
-INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp' for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i'
 INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp' for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H'
 INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer'
 INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer'
 INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp' for cell 'theTlpControl/rx_Itf/Upstream_DMA_Engine/US_TLP_Buffer'
 INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp' for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer'
+INFO: [Project 1-454] Reading design checkpoint '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp' for cell 'make4Lanes.pcieCore/v7_pcie_i'
 INFO: [Netlist 29-17] Analyzing 455 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2014.2
@@ -32,8 +32,6 @@ Loading io standards from /opt/Xilinx/Vivado/2014.2/data/./parts/xilinx/artix7/I
 Loading device configuration modes from /opt/Xilinx/Vivado/2014.2/data/parts/xilinx/artix7/ConfigModes.xml
 INFO: [Opt 31-140] Inserted 8 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 9 OBUFs to IO ports without IO buffers.
-Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i/U0'
-Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/pcie_7x_0_i/U0'
 Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
 Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
 Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/Downstream_DMA_Engine/DMA_DSP_Buffer/U0'
@@ -44,20 +42,22 @@ Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_s
 Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_sfifo_15x128/v6_sfifo_15x128/v6_sfifo_15x128.xdc] for cell 'theTlpControl/rx_Itf/MRd_Channel/pioCplD_Buffer/U0'
 Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
 Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_mBuf_128x72/v6_mBuf_128x72/v6_mBuf_128x72.xdc] for cell 'theTlpControl/tx_Itf/ABB_Tx_MBuffer/U0'
+Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/U0'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc:120]
+INFO: [Timing 38-2] Deriving generated clocks [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc:120]
+create_generated_clock: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1510.086 ; gain = 435.422
+Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/source/pcie_7x_0-PCIE_X0Y0.xdc] for cell 'make4Lanes.pcieCore/v7_pcie_i/U0'
 Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
 Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/constrs_1/imports/cern.git/ABB3_pcie_4_lane_EMu_FIFO_elink.xdc]
-INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/pcie_7x_0/pcie_7x_0.dcp'
 INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_eb_fifo_counted_resized_synth_1/v6_eb_fifo_counted_resized.dcp'
 INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
 INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
 INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_sfifo_15x128_synth_1/v6_sfifo_15x128.dcp'
 INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/v6_mBuf_128x72_synth_1/v6_mBuf_128x72.dcp'
+INFO: [Project 1-538] Ignoring constraints in dcp '/home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/pcie_7x_0_synth_1/pcie_7x_0.dcp'
 Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
-INFO: [Timing 38-2] Deriving generated clocks [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
 WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0/wr_clk]'. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
 INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:53]
-get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1510.078 ; gain = 435.414
 CRITICAL WARNING: [Common 17-55] 'get_property' expects at least one object. [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc:61]
 Finished Parsing XDC File [/home/vladimir/TESTDIFFAC/cernv1/cernv1.srcs/sources_1/ip/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized/v6_eb_fifo_counted_resized_clocks.xdc] for cell 'LoopBack_FIFO_Off.queue_buffer0/U0_B2H/U0'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -65,7 +65,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
-link_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1510.078 ; gain = 766.465
+link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1511.086 ; gain = 767.473
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
@@ -76,37 +76,150 @@ INFO: [Drc 23-27] Running DRC with 4 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.39 . Memory (MB): peak = 1516.082 ; gain = 6.000
+Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.46 . Memory (MB): peak = 1515.090 ; gain = 4.000
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 4 inverter(s) to 6 load pin(s).
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_err_atomic_egress_blocked is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_1
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_err_malformed is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_10
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_err_mc_blocked is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_11
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_err_norecovery is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_12
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_err_poisoned is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_13
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_interrupt_stat is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_18
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_mgmt_wr_readonly is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_21
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_pm_force_state_en is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_23
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_pm_halt_aspm_l0s is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_24
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_pm_halt_aspm_l1 is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_25
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_err_internal_cor is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_7
+WARNING: [Opt 31-155] Driverless net make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/cfg_err_internal_uncor is driving LUT input pin I0 which is used by the LUT equation. If the LUT is not removed or a driver added, this warning will become an error. LUT cell name: make4Lanes.pcieCore/v7_pcie_i/U0/inst/pcie_top_i/pcie_7x_i/pcie_block_i_i_8
+INFO: [Opt 31-138] Pushed 5 inverter(s) to 7 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 142d52df6
+Phase 1 Retarget | Checksum: f03a849b
 
-Time (s): cpu = 00:00:00.77 ; elapsed = 00:00:00.77 . Memory (MB): peak = 1516.082 ; gain = 0.000
+Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:00.90 . Memory (MB): peak = 1515.090 ; gain = 0.000
 
 Phase 2 Constant Propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-10] Eliminated 1651 cells.
-Phase 2 Constant Propagation | Checksum: faf5c654
+INFO: [Opt 31-138] Pushed 4 inverter(s) to 4 load pin(s).
+INFO: [Opt 31-10] Eliminated 1646 cells.
+Phase 2 Constant Propagation | Checksum: 192b9a303
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1516.082 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1515.090 ; gain = 0.000
 
 Phase 3 Sweep
-INFO: [Opt 31-12] Eliminated 5976 unconnected nets.
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_aer_interrupt_msgnum[0].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_aer_interrupt_msgnum[1].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_aer_interrupt_msgnum[2].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_aer_interrupt_msgnum[3].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_aer_interrupt_msgnum[4].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_acs.
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[0].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[100].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[101].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[102].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[103].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[104].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[105].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[106].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[107].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[108].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[109].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[10].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[110].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[111].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[112].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[113].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[114].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[115].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[116].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[117].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[118].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[119].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[11].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[120].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[121].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[122].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[123].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[124].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[125].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[126].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[127].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[12].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[13].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[14].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[15].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[16].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[17].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[18].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[19].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[1].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[20].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[21].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[22].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[23].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[24].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[25].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[26].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[27].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[28].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[29].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[2].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[30].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[31].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[32].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[33].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[34].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[35].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[36].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[37].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[38].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[39].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[3].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[40].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[41].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[42].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[43].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[44].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[45].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[46].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[47].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[48].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[49].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[4].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[50].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[51].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[52].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[53].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[54].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[55].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[56].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[57].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[58].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[59].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[5].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[60].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[61].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[62].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[63].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[64].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[65].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[66].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[67].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[68].
+WARNING: [Opt 31-6] Deleting driverless net: make4Lanes.pcieCore/v7_pcie_i/cfg_err_aer_headerlog[69].
+INFO: [Common 17-14] Message 'Opt 31-6' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Opt 31-12] Eliminated 5904 unconnected nets.
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
-INFO: [Opt 31-11] Eliminated 2898 unconnected cells.
-Phase 3 Sweep | Checksum: 1397848b2
+INFO: [Opt 31-11] Eliminated 2895 unconnected cells.
+Phase 3 Sweep | Checksum: 22bf2d877
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1516.082 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1397848b2
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1515.090 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 22bf2d877
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1516.082 ; gain = 0.000
-Implement Debug Cores | Checksum: 1c945c1c4
-Logic Optimization | Checksum: 1c945c1c4
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1515.090 ; gain = 0.000
+Implement Debug Cores | Checksum: 135087423
+Logic Optimization | Checksum: 135087423
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Will skip clock gating for clocks with period < 3.12 ns.
@@ -119,20 +232,20 @@ INFO: [Pwropt 34-162] WRITE_MODE attribute of 57 BRAM(s) out of a total of 65 ha
     Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 56 newly gated: 0 Total Ports: 130
-Ending PowerOpt Patch Enables Task | Checksum: 148e6fd03
+Ending PowerOpt Patch Enables Task | Checksum: 21489717c
 
-Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1639.098 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 148e6fd03
+Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1639.105 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 21489717c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1639.098 ; gain = 123.016
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1639.105 ; gain = 124.016
 INFO: [Common 17-83] Releasing license: Implementation
-40 Infos, 1 Warnings, 5 Critical Warnings and 0 Errors encountered.
+40 Infos, 113 Warnings, 5 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1639.098 ; gain = 129.016
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1639.105 ; gain = 128.016
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.19 . Memory (MB): peak = 1639.102 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.21 . Memory (MB): peak = 1639.109 ; gain = 0.000
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
@@ -145,213 +258,213 @@ Starting Placer Task
 INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
 
 Phase 1 Placer Runtime Estimator
-Phase 1 Placer Runtime Estimator | Checksum: 12453f2b2
+Phase 1 Placer Runtime Estimator | Checksum: 17053be5f
 
-Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1639.102 ; gain = 0.000
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1639.109 ; gain = 0.000
 
 Phase 2 Placer Initialization
 
 Phase 2.1 Placer Initialization Core
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1639.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1639.109 ; gain = 0.000
 
 Phase 2.1.1 Mandatory Logic Optimization
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1639.102 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1639.109 ; gain = 0.000
 Phase 2.1.1 Mandatory Logic Optimization | Checksum: 7c67fcf0
 
-Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.59 . Memory (MB): peak = 1639.102 ; gain = 0.000
+Time (s): cpu = 00:00:00.58 ; elapsed = 00:00:00.62 . Memory (MB): peak = 1639.109 ; gain = 0.000
 
 Phase 2.1.2 Build Super Logic Region (SLR) Database
 Phase 2.1.2 Build Super Logic Region (SLR) Database | Checksum: 7c67fcf0
 
-Time (s): cpu = 00:00:00.64 ; elapsed = 00:00:00.64 . Memory (MB): peak = 1639.102 ; gain = 0.000
+Time (s): cpu = 00:00:00.62 ; elapsed = 00:00:00.67 . Memory (MB): peak = 1639.109 ; gain = 0.000
 
 Phase 2.1.3 Add Constraints
 Phase 2.1.3 Add Constraints | Checksum: 7c67fcf0
 
-Time (s): cpu = 00:00:00.64 ; elapsed = 00:00:00.64 . Memory (MB): peak = 1639.102 ; gain = 0.000
+Time (s): cpu = 00:00:00.62 ; elapsed = 00:00:00.67 . Memory (MB): peak = 1639.109 ; gain = 0.000
 
 Phase 2.1.4 Build Shapes/ HD Config
 
 Phase 2.1.4.1 Build Macros
-Phase 2.1.4.1 Build Macros | Checksum: e551b975
+Phase 2.1.4.1 Build Macros | Checksum: dc5ab95c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1663.109 ; gain = 24.008
-Phase 2.1.4 Build Shapes/ HD Config | Checksum: e551b975
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1663.117 ; gain = 24.008
+Phase 2.1.4 Build Shapes/ HD Config | Checksum: dc5ab95c
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 2.1.5 IO Placement/ Clock Placement/ Build Placer Device
 
 Phase 2.1.5.1 Pre-Place Cells
 Phase 2.1.5.1 Pre-Place Cells | Checksum: 7c67fcf0
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1663.117 ; gain = 24.008
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 2.1.5.2 IO & Clk Clean Up
 Phase 2.1.5.2 IO & Clk Clean Up | Checksum: 7c67fcf0
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 2.1.5.3 Implementation Feasibility check On IDelay
 Phase 2.1.5.3 Implementation Feasibility check On IDelay | Checksum: 7c67fcf0
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 2.1.5.4 Commit IO Placement
 Phase 2.1.5.4 Commit IO Placement | Checksum: 2b241eb7
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1663.109 ; gain = 24.008
-Phase 2.1.5 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 940ddb3c
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1663.117 ; gain = 24.008
+Phase 2.1.5 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 8b16db23
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 2.1.6 Build Placer Netlist Model
 
 Phase 2.1.6.1 Place Init Design
 
 Phase 2.1.6.1.1 Init Lut Pin Assignment
-Phase 2.1.6.1.1 Init Lut Pin Assignment | Checksum: f62e0780
+Phase 2.1.6.1.1 Init Lut Pin Assignment | Checksum: cd25e4f5
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 2.1.6.1.2 Build Clock Data
-Phase 2.1.6.1.2 Build Clock Data | Checksum: f2c63c10
+Phase 2.1.6.1.2 Build Clock Data | Checksum: 13fcd5e55
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 2.1.6.1.3 setBudgets in placeInitDesign
-Phase 2.1.6.1.3 setBudgets in placeInitDesign | Checksum: 190c6307b
+Phase 2.1.6.1.3 setBudgets in placeInitDesign | Checksum: 16e6beae6
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 1663.109 ; gain = 24.008
-Phase 2.1.6.1 Place Init Design | Checksum: 1647f865e
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1663.117 ; gain = 24.008
+Phase 2.1.6.1 Place Init Design | Checksum: dc567383
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 1663.109 ; gain = 24.008
-Phase 2.1.6 Build Placer Netlist Model | Checksum: 1647f865e
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1663.117 ; gain = 24.008
+Phase 2.1.6 Build Placer Netlist Model | Checksum: dc567383
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 2.1.7 Constrain Clocks/Macros
 
 Phase 2.1.7.1 Constrain Global/Regional Clocks
-Phase 2.1.7.1 Constrain Global/Regional Clocks | Checksum: 24ede6901
+Phase 2.1.7.1 Constrain Global/Regional Clocks | Checksum: 1c6b55626
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 1663.109 ; gain = 24.008
-Phase 2.1.7 Constrain Clocks/Macros | Checksum: 24ede6901
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1663.117 ; gain = 24.008
+Phase 2.1.7 Constrain Clocks/Macros | Checksum: 1c6b55626
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 1663.109 ; gain = 24.008
-Phase 2.1 Placer Initialization Core | Checksum: 24ede6901
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1663.117 ; gain = 24.008
+Phase 2.1 Placer Initialization Core | Checksum: 1c6b55626
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 1663.109 ; gain = 24.008
-Phase 2 Placer Initialization | Checksum: 24ede6901
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1663.117 ; gain = 24.008
+Phase 2 Placer Initialization | Checksum: 1c6b55626
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 3 Global Placement
-Phase 3 Global Placement | Checksum: 21a5ab602
+Phase 3 Global Placement | Checksum: 2b1e6fefd
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:24 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:29 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 4 Detail Placement
 
 Phase 4.1 Commit Multi Column Macros
-Phase 4.1 Commit Multi Column Macros | Checksum: 21a5ab602
+Phase 4.1 Commit Multi Column Macros | Checksum: 2b1e6fefd
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:24 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:29 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 4.2 Commit Most Macros & LUTRAMs
-Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 2675954b8
+Phase 4.2 Commit Most Macros & LUTRAMs | Checksum: 24a20f2ce
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:26 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:31 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 4.3 Area Swap Optimization
-Phase 4.3 Area Swap Optimization | Checksum: 251b5ae72
+Phase 4.3 Area Swap Optimization | Checksum: 1c4060d39
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:31 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 4.4 Timing Path Optimizer
-Phase 4.4 Timing Path Optimizer | Checksum: 25f08047e
+Phase 4.4 Timing Path Optimizer | Checksum: 1ce068ffe
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:27 . Memory (MB): peak = 1663.109 ; gain = 24.008
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:32 . Memory (MB): peak = 1663.117 ; gain = 24.008
 
 Phase 4.5 Commit Small Macros & Core Logic
 
 Phase 4.5.1 setBudgets
-Phase 4.5.1 setBudgets | Checksum: 19cf35e86
+Phase 4.5.1 setBudgets | Checksum: 25d20c100
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:28 . Memory (MB): peak = 1663.109 ; gain = 24.008
-Phase 4.5 Commit Small Macros & Core Logic | Checksum: 1d10c27fc
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:32 . Memory (MB): peak = 1663.117 ; gain = 24.008
+Phase 4.5 Commit Small Macros & Core Logic | Checksum: 209a5ad4a
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:31 . Memory (MB): peak = 1687.121 ; gain = 48.020
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:36 . Memory (MB): peak = 1687.129 ; gain = 48.020
 
 Phase 4.6 Re-assign LUT pins
-Phase 4.6 Re-assign LUT pins | Checksum: 1d10c27fc
+Phase 4.6 Re-assign LUT pins | Checksum: 209a5ad4a
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:32 . Memory (MB): peak = 1687.121 ; gain = 48.020
-Phase 4 Detail Placement | Checksum: 1d10c27fc
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:37 . Memory (MB): peak = 1687.129 ; gain = 48.020
+Phase 4 Detail Placement | Checksum: 209a5ad4a
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:32 . Memory (MB): peak = 1687.121 ; gain = 48.020
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:37 . Memory (MB): peak = 1687.129 ; gain = 48.020
 
 Phase 5 Post Placement Optimization and Clean-Up
 
 Phase 5.1 PCOPT Shape updates
-Phase 5.1 PCOPT Shape updates | Checksum: 1489ee696
+Phase 5.1 PCOPT Shape updates | Checksum: 1f6624eb4
 
-Time (s): cpu = 00:01:02 ; elapsed = 00:00:32 . Memory (MB): peak = 1687.121 ; gain = 48.020
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:37 . Memory (MB): peak = 1687.129 ; gain = 48.020
 
 Phase 5.2 Post Placement Optimization
 
 Phase 5.2.1 Post Placement Timing Optimization
 
 Phase 5.2.1.1 Restore Best Placement
-Phase 5.2.1.1 Restore Best Placement | Checksum: 1e91228ec
+Phase 5.2.1.1 Restore Best Placement | Checksum: 1fa81ce3b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-5.786. For the most accurate timing information please run report_timing.
-Phase 5.2.1 Post Placement Timing Optimization | Checksum: 1e91228ec
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:58 . Memory (MB): peak = 1687.129 ; gain = 48.020
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-5.947. For the most accurate timing information please run report_timing.
+Phase 5.2.1 Post Placement Timing Optimization | Checksum: 1fa81ce3b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
-Phase 5.2 Post Placement Optimization | Checksum: 1e91228ec
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:59 . Memory (MB): peak = 1687.129 ; gain = 48.020
+Phase 5.2 Post Placement Optimization | Checksum: 1fa81ce3b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:59 . Memory (MB): peak = 1687.129 ; gain = 48.020
 
 Phase 5.3 Post Placement Cleanup
-Phase 5.3 Post Placement Cleanup | Checksum: 1e91228ec
+Phase 5.3 Post Placement Cleanup | Checksum: 1fa81ce3b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:59 . Memory (MB): peak = 1687.129 ; gain = 48.020
 
 Phase 5.4 Placer Reporting
 
 Phase 5.4.1 Restore STA
-Phase 5.4.1 Restore STA | Checksum: 1e91228ec
+Phase 5.4.1 Restore STA | Checksum: 1fa81ce3b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
-Phase 5.4 Placer Reporting | Checksum: 1e91228ec
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:59 . Memory (MB): peak = 1687.129 ; gain = 48.020
+Phase 5.4 Placer Reporting | Checksum: 1fa81ce3b
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:59 . Memory (MB): peak = 1687.129 ; gain = 48.020
 
 Phase 5.5 Final Placement Cleanup
-Phase 5.5 Final Placement Cleanup | Checksum: 230f58065
+Phase 5.5 Final Placement Cleanup | Checksum: 1b2f1405c
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
-Phase 5 Post Placement Optimization and Clean-Up | Checksum: 230f58065
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:59 . Memory (MB): peak = 1687.129 ; gain = 48.020
+Phase 5 Post Placement Optimization and Clean-Up | Checksum: 1b2f1405c
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
-Ending Placer Task | Checksum: 1fed6619f
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:59 . Memory (MB): peak = 1687.129 ; gain = 48.020
+Ending Placer Task | Checksum: 14eba58df
 
-Time (s): cpu = 00:01:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1687.121 ; gain = 48.020
+Time (s): cpu = 00:02:29 ; elapsed = 00:01:59 . Memory (MB): peak = 1687.129 ; gain = 48.020
 INFO: [Common 17-83] Releasing license: Implementation
-51 Infos, 1 Warnings, 5 Critical Warnings and 0 Errors encountered.
+51 Infos, 113 Warnings, 5 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:38 ; elapsed = 00:01:07 . Memory (MB): peak = 1687.121 ; gain = 48.020
+place_design: Time (s): cpu = 00:02:30 ; elapsed = 00:02:00 . Memory (MB): peak = 1687.129 ; gain = 48.020
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1687.125 ; gain = 0.000
-report_utilization: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.30 . Memory (MB): peak = 1687.125 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1687.133 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.36 . Memory (MB): peak = 1687.133 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
@@ -367,118 +480,123 @@ INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 
 Starting Route Task
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 12c5f462a
+Phase 1 Build RT Design | Checksum: 8d2e9ae4
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1873.504 ; gain = 180.383
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:40 . Memory (MB): peak = 1876.527 ; gain = 180.398
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 12c5f462a
+Phase 2.1 Create Timer | Checksum: 8d2e9ae4
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1873.508 ; gain = 180.387
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:40 . Memory (MB): peak = 1876.531 ; gain = 180.402
  Number of Nodes with overlaps = 0
 
 Phase 2.2 Update Timing
-Phase 2.2 Update Timing | Checksum: f97b580d
+Phase 2.2 Update Timing | Checksum: e932a4c8
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:42 . Memory (MB): peak = 1921.020 ; gain = 227.898
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.03  | TNS=-290   | WHS=-2.47  | THS=-400   |
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:47 . Memory (MB): peak = 1921.043 ; gain = 224.914
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.19  | TNS=-278   | WHS=-2.6   | THS=-495   |
 
-Phase 2 Router Initialization | Checksum: 13994c62b
+Phase 2 Router Initialization | Checksum: fcdedd42
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:43 . Memory (MB): peak = 1921.020 ; gain = 227.898
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:49 . Memory (MB): peak = 1921.043 ; gain = 224.914
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: a12be4e9
+Phase 3 Initial Routing | Checksum: 1657817c5
 
-Time (s): cpu = 00:01:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:55 . Memory (MB): peak = 1964.043 ; gain = 267.914
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1543
- Number of Nodes with overlaps = 122
- Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 1657
+ Number of Nodes with overlaps = 274
+ Number of Nodes with overlaps = 69
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
 
 Phase 4.1.1 Update Timing
-Phase 4.1.1 Update Timing | Checksum: 116632a67
+Phase 4.1.1 Update Timing | Checksum: c7f98546
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:01:25 . Memory (MB): peak = 1999.020 ; gain = 305.898
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.2   | TNS=-1.16e+03| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:46 ; elapsed = 00:01:17 . Memory (MB): peak = 1964.043 ; gain = 267.914
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.31  | TNS=-717   | WHS=N/A    | THS=N/A    |
 
 
 Phase 4.1.2 GlobIterForTiming
 
 Phase 4.1.2.1 Update Timing
-Phase 4.1.2.1 Update Timing | Checksum: 19efc8687
+Phase 4.1.2.1 Update Timing | Checksum: 124727276
 
-Time (s): cpu = 00:02:18 ; elapsed = 00:01:25 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:01:46 ; elapsed = 00:01:17 . Memory (MB): peak = 1964.043 ; gain = 267.914
 
 Phase 4.1.2.2 Fast Budgeting
-Phase 4.1.2.2 Fast Budgeting | Checksum: 19efc8687
+Phase 4.1.2.2 Fast Budgeting | Checksum: 124727276
 
-Time (s): cpu = 00:02:19 ; elapsed = 00:01:25 . Memory (MB): peak = 1999.020 ; gain = 305.898
-Phase 4.1.2 GlobIterForTiming | Checksum: 1599e98ab
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:17 . Memory (MB): peak = 1964.043 ; gain = 267.914
+Phase 4.1.2 GlobIterForTiming | Checksum: 457caa24
 
-Time (s): cpu = 00:02:19 ; elapsed = 00:01:26 . Memory (MB): peak = 1999.020 ; gain = 305.898
-Phase 4.1 Global Iteration 0 | Checksum: 1599e98ab
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:18 . Memory (MB): peak = 1964.043 ; gain = 267.914
+Phase 4.1 Global Iteration 0 | Checksum: 457caa24
 
-Time (s): cpu = 00:02:19 ; elapsed = 00:01:26 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:01:47 ; elapsed = 00:01:18 . Memory (MB): peak = 1964.043 ; gain = 267.914
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 
 Phase 4.2.1 Update Timing
-Phase 4.2.1 Update Timing | Checksum: 6a8acae6
+Phase 4.2.1 Update Timing | Checksum: 5858fcf3
 
-Time (s): cpu = 00:02:19 ; elapsed = 00:01:26 . Memory (MB): peak = 1999.020 ; gain = 305.898
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.21  | TNS=-1.16e+03| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:18 . Memory (MB): peak = 1964.043 ; gain = 267.914
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.33  | TNS=-726   | WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 116632a67
+Phase 4.2 Global Iteration 1 | Checksum: c7f98546
 
-Time (s): cpu = 00:02:19 ; elapsed = 00:01:26 . Memory (MB): peak = 1999.020 ; gain = 305.898
-Phase 4 Rip-up And Reroute | Checksum: 116632a67
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:18 . Memory (MB): peak = 1964.043 ; gain = 267.914
+Phase 4 Rip-up And Reroute | Checksum: c7f98546
 
-Time (s): cpu = 00:02:19 ; elapsed = 00:01:26 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:01:48 ; elapsed = 00:01:18 . Memory (MB): peak = 1964.043 ; gain = 267.914
 
 Phase 5 Delay CleanUp
 
 Phase 5.1 Update Timing
-Phase 5.1 Update Timing | Checksum: 116632a67
+Phase 5.1 Update Timing | Checksum: c7f98546
 
-Time (s): cpu = 00:02:21 ; elapsed = 00:01:27 . Memory (MB): peak = 1999.020 ; gain = 305.898
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.2   | TNS=-1.11e+03| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:49 ; elapsed = 00:01:19 . Memory (MB): peak = 1964.043 ; gain = 267.914
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.31  | TNS=-665   | WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5 Delay CleanUp | Checksum: 10e6d3c28
+Phase 5 Delay CleanUp | Checksum: 5c4063dd
 
-Time (s): cpu = 00:02:37 ; elapsed = 00:01:32 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:26 . Memory (MB): peak = 1973.043 ; gain = 276.914
 
 Phase 6 Clock Skew Optimization
-Phase 6 Clock Skew Optimization | Checksum: 10e6d3c28
+Phase 6 Clock Skew Optimization | Checksum: 5c4063dd
 
-Time (s): cpu = 00:02:37 ; elapsed = 00:01:32 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:02:02 ; elapsed = 00:01:26 . Memory (MB): peak = 1973.043 ; gain = 276.914
 
 Phase 7 Post Hold Fix
 
 Phase 7.1 Update Timing
-Phase 7.1 Update Timing | Checksum: 10e6d3c28
+Phase 7.1 Update Timing | Checksum: 5c4063dd
 
-Time (s): cpu = 00:02:38 ; elapsed = 00:01:32 . Memory (MB): peak = 1999.020 ; gain = 305.898
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.2   | TNS=-1.07e+03| WHS=-0.39  | THS=-1.11  |
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:27 . Memory (MB): peak = 1973.043 ; gain = 276.914
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.31  | TNS=-638   | WHS=-0.573 | THS=-1.33  |
 
-Phase 7 Post Hold Fix | Checksum: 1648d78b4
+Phase 7 Post Hold Fix | Checksum: 64fd7bb3
 
-Time (s): cpu = 00:02:39 ; elapsed = 00:01:33 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:27 . Memory (MB): peak = 1973.043 ; gain = 276.914
 
 Phase 8 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.86201 %
-  Global Horizontal Routing Utilization  = 2.48215 %
+  Global Vertical Routing Utilization    = 2.02929 %
+  Global Horizontal Routing Utilization  = 2.32683 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -488,60 +606,61 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 65.7658%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 74.7748%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 79.4118%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 75%, No Congested Regions.
-Phase 8 Route finalize | Checksum: 1648d78b4
+North Dir 1x1 Area, Max Cong = 72.0721%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 71.1712%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 63.2353%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 83.8235%, No Congested Regions.
+Phase 8 Route finalize | Checksum: 64fd7bb3
 
-Time (s): cpu = 00:02:39 ; elapsed = 00:01:33 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:27 . Memory (MB): peak = 1973.043 ; gain = 276.914
 
 Phase 9 Verifying routed nets
 
  Verification completed successfully
-Phase 9 Verifying routed nets | Checksum: 1648d78b4
+Phase 9 Verifying routed nets | Checksum: 64fd7bb3
 
-Time (s): cpu = 00:02:39 ; elapsed = 00:01:33 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:02:04 ; elapsed = 00:01:27 . Memory (MB): peak = 1973.043 ; gain = 276.914
 
 Phase 10 Depositing Routes
-Phase 10 Depositing Routes | Checksum: 15851fe67
+Phase 10 Depositing Routes | Checksum: 83917324
 
-Time (s): cpu = 00:02:40 ; elapsed = 00:01:34 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:02:05 ; elapsed = 00:01:28 . Memory (MB): peak = 1973.043 ; gain = 276.914
 
 Phase 11 Post Router Timing
 
 Phase 11.1 Update Timing
-Phase 11.1 Update Timing | Checksum: 15851fe67
+Phase 11.1 Update Timing | Checksum: 83917324
 
-Time (s): cpu = 00:02:41 ; elapsed = 00:01:34 . Memory (MB): peak = 1999.020 ; gain = 305.898
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.2   | TNS=-1.07e+03| WHS=0.063  | THS=0      |
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:29 . Memory (MB): peak = 1973.043 ; gain = 276.914
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.31  | TNS=-649   | WHS=0.059  | THS=0      |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 11 Post Router Timing | Checksum: 15851fe67
+Phase 11 Post Router Timing | Checksum: 83917324
 
-Time (s): cpu = 00:02:41 ; elapsed = 00:01:34 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:29 . Memory (MB): peak = 1973.043 ; gain = 276.914
 INFO: [Route 35-16] Router Completed Successfully
-Ending Route Task | Checksum: 15851fe67
+Ending Route Task | Checksum: 83917324
 
-Time (s): cpu = 00:02:41 ; elapsed = 00:01:34 . Memory (MB): peak = 1999.020 ; gain = 305.898
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:29 . Memory (MB): peak = 1973.043 ; gain = 276.914
 
 Routing Is Done.
 
-Time (s): cpu = 00:02:41 ; elapsed = 00:01:34 . Memory (MB): peak = 1999.023 ; gain = 305.902
+Time (s): cpu = 00:02:07 ; elapsed = 00:01:29 . Memory (MB): peak = 1973.047 ; gain = 276.918
 INFO: [Common 17-83] Releasing license: Implementation
-64 Infos, 2 Warnings, 5 Critical Warnings and 0 Errors encountered.
+64 Infos, 114 Warnings, 5 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:02:44 ; elapsed = 00:01:36 . Memory (MB): peak = 1999.023 ; gain = 311.898
+route_design: Time (s): cpu = 00:02:09 ; elapsed = 00:01:35 . Memory (MB): peak = 1973.047 ; gain = 285.914
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1999.023 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1973.047 ; gain = 0.000
 INFO: [Drc 23-27] Running DRC with 4 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/vladimir/TESTDIFFAC/cernv1/cernv1.runs/impl_1/v6pcieDMA_drc_routed.rpt.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max, Constraints type: SDC.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
 CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+report_timing_summary: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1973.047 ; gain = 0.000
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -564,5 +683,5 @@ INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory for users of free Webpack licenses. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-185] WebTalk report has not been sent to Xilinx. Please check your network and proxy settings.
 INFO: [Common 17-83] Releasing license: Implementation
-write_bitstream: Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 2298.445 ; gain = 299.422
-INFO: [Common 17-206] Exiting Vivado at Tue Feb 10 12:56:30 2015...
+write_bitstream: Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 2308.031 ; gain = 334.984
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 12 10:05:49 2015...

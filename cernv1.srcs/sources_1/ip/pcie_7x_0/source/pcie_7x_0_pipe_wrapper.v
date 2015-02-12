@@ -642,27 +642,60 @@ begin
 end  
 
 
+//---------- PIPE Clock Module -------------------------------------------------
+generate
+
+        begin : pipe_clock_int
+pcie_7x_0_pipe_clock #
+        (
+        
+            .PCIE_ASYNC_EN                  (PCIE_ASYNC_EN),        // PCIe async enable
+            .PCIE_TXBUF_EN                  (PCIE_TXBUF_EN),        // PCIe TX buffer enable for Gen1/Gen2 only
+            .PCIE_LANE                      (PCIE_LANE),            // PCIe number of lanes
+            .PCIE_LINK_SPEED                (PCIE_LINK_SPEED),      // PCIe link speed 
+            .PCIE_REFCLK_FREQ               (PCIE_REFCLK_FREQ),     // PCIe reference clock frequency
+            .PCIE_USERCLK1_FREQ             (PCIE_USERCLK1_FREQ),   // PCIe user clock 1 frequency
+            .PCIE_USERCLK2_FREQ             (PCIE_USERCLK2_FREQ),   // PCIe user clock 2 frequency
+            .PCIE_OOBCLK_MODE               (PCIE_OOBCLK_MODE),     // PCIe OOB clock mode
+            .PCIE_DEBUG_MODE                (PCIE_DEBUG_MODE)       // PCIe debug mode
+                
+        )
+        pipe_clock_i
+        (
+        
+            //---------- Input -------------------------------------
+            .CLK_CLK                        (PIPE_CLK),
+            .CLK_TXOUTCLK                   (gt_txoutclk[0]),       // Reference clock from lane 0
+            .CLK_RXOUTCLK_IN                (gt_rxoutclk),         
+          //.CLK_RST_N                      (1'b1),                 
+            .CLK_RST_N                      (PIPE_MMCM_RST_N),      // Allow system reset for error recovery             
+            .CLK_PCLK_SEL                   (rate_pclk_sel),    
+            .CLK_PCLK_SEL_SLAVE             (INT_PCLK_SEL_SLAVE ), 
+            .CLK_GEN3                       (rate_gen3[0]),          
+            
+            //---------- Output ------------------------------------
+            .CLK_PCLK                       (clk_pclk),
+            .CLK_PCLK_SLAVE                 (INT_PCLK_OUT_SLAVE),
+            .CLK_RXUSRCLK                   (clk_rxusrclk),  
+            .CLK_RXOUTCLK_OUT               (clk_rxoutclk),
+            .CLK_DCLK                       (clk_dclk),
+            .CLK_USERCLK1                   (PIPE_USERCLK1),
+            .CLK_USERCLK2                   (PIPE_USERCLK2),
+            .CLK_OOBCLK                     (clk_oobclk),
+            .CLK_MMCM_LOCK                  (clk_mmcm_lock)
+            
+        );
+
+        assign INT_RXUSRCLK_OUT  = clk_rxusrclk;
+        assign INT_RXOUTCLK_OUT  = clk_rxoutclk;
+        assign INT_DCLK_OUT      = clk_dclk;
+        assign INT_USERCLK1_OUT  = PIPE_USERCLK1;
+        assign INT_USERCLK2_OUT  = PIPE_USERCLK2;
+        assign INT_OOBCLK_OUT    = clk_oobclk;
+        assign INT_MMCM_LOCK_OUT = clk_mmcm_lock;
+        end 
+endgenerate
     
-        //---------- PIPE Clock External ---------------------------------------
-        assign clk_pclk      = PIPE_PCLK_IN;
-        assign clk_rxusrclk  = PIPE_RXUSRCLK_IN;
-        assign clk_rxoutclk  = PIPE_RXOUTCLK_IN;
-        assign clk_dclk      = PIPE_DCLK_IN;
-        assign PIPE_USERCLK1 = PIPE_USERCLK1_IN;
-        assign PIPE_USERCLK2 = PIPE_USERCLK2_IN;
-        assign clk_oobclk    = PIPE_OOBCLK_IN;
-        assign clk_mmcm_lock = PIPE_MMCM_LOCK_IN;
-
-
-        assign INT_PCLK_OUT_SLAVE= 1'b0;
-        assign INT_RXUSRCLK_OUT  = 1'b0;
-        assign INT_RXOUTCLK_OUT  = {PCIE_LANE{1'b0}};
-        assign INT_DCLK_OUT      = 1'b0;
-        assign INT_USERCLK1_OUT  = 1'b0;
-        assign INT_USERCLK2_OUT  = 1'b0;
-        assign INT_OOBCLK_OUT    = 1'b0;
-        assign INT_MMCM_LOCK_OUT = 1'b0;
-
 
 
 
